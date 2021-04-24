@@ -50,7 +50,6 @@ public abstract class CharacterController : MonoBehaviour
 
     public void Hit(int damage)
     {
-        Debug.Log(gameObject.name +" : I am getting hit !");
         onHit?.Invoke();
     }
 }

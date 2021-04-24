@@ -58,7 +58,6 @@ public class PlayerController : CharacterController
     {
         if (!IsAttacking)
         {
-            Debug.Log("Player attacking !");
             GetComponentInChildren<Weapon>().Attack(whatIsEnemy);
         }
         
