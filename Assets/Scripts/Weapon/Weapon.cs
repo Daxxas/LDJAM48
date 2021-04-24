@@ -41,14 +41,15 @@ public class Weapon : MonoBehaviour
         Debug.Log("Weapon attacking !");
         Collider2D[] result = new Collider2D[3];
 
+        
         ContactFilter2D filter = new ContactFilter2D();
-        filter.useLayerMask = true;
-        filter.layerMask = whatIsEnemy;
+        filter.SetLayerMask(whatIsEnemy);
+        
         GetComponentInChildren<Collider2D>().OverlapCollider(filter, result);
 
         foreach (var enemy in result)
         {
-            enemy.GetComponent<CharacterController>()?.Hit(damage);
+            enemy?.GetComponent<CharacterController>()?.Hit(damage);
         }
     }
 }

@@ -176,7 +176,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 15.01
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -288,7 +288,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919913856}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.69, y: 0, z: 0}
+  m_LocalPosition: {x: 12.52, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1954903833}
@@ -307,6 +307,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e757ab2dd9f12b4f9b85ac909edb6b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterState: 0
   moveSpeed: 10
   attackClip: {fileID: 7400000, guid: e3270da03ecbc674d8b30535c048c7b7, type: 2}
   whatIsEnemy:
@@ -416,6 +417,7 @@ GameObject:
   - component: {fileID: 1500580808}
   - component: {fileID: 1500580807}
   - component: {fileID: 1500580810}
+  - component: {fileID: 1500580811}
   m_Layer: 7
   m_Name: Zombie
   m_TagString: Untagged
@@ -519,8 +521,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0b3a95e6c9686d4595602508f3890f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterState: 0
   moveSpeed: 1
   attackClip: {fileID: 0}
+  eyeReach: 10
 --- !u!50 &1500580809
 Rigidbody2D:
   serializedVersion: 4
@@ -568,6 +572,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1500580811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500580804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87bef2dcd6f0ece42a7c77bfe085d4bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1954903833 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4817508584529260023, guid: 83d671bee9765044ba0d8d1205c73b8a, type: 3}

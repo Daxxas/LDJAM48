@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public abstract class CharacterController : MonoBehaviour
 {
+    public CharacterState characterState;
+    
     protected Rigidbody2D rigidbody;
     
     [SerializeField] protected float moveSpeed = 1f;
