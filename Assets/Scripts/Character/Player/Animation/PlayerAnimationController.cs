@@ -29,6 +29,17 @@ public class PlayerAnimationController : AnimationController
         "Slash_left"
     };
 
+    
+    private static readonly List<string> HIT = new List<string>()
+    {
+        "Hit_up",
+        "Hit_right",
+        "Hit_down",
+        "Hit_left"
+    };
+
+    private static readonly string DEATH = "dead";
+    
     private void Start()
     {
         base.Start();
@@ -38,6 +49,18 @@ public class PlayerAnimationController : AnimationController
     private void Update()
     {
         base.Update();
+
+        if (characterController.IsDead)
+        {
+            ChangeAnimationState(DEATH);
+            return;
+        }
+        
+        if (characterController.IsHitten)
+        {
+            ChangeAnimationState(HIT[currentDirection]);
+            return;
+        }
         
         if (!characterController.IsAttacking)
         {

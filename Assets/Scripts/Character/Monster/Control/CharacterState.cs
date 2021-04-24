@@ -1,4 +1,4 @@
 public enum CharacterState
 {
-    IDLE, WALK, ATTACK
+    IDLE, WALK, ATTACK, HIT, DEAD
 }

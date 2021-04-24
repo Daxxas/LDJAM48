@@ -10,13 +10,10 @@ public class PlayerController : CharacterController
 
     private Vector2 inputDirection;
     
-    [SerializeField] private LayerMask whatIsEnemy;
-
-    
-    
-    
     void Start()
     {
+        base.Start();
+        
         inputManager = GetComponent<InputManager>();
         
         inputManager.playerInputs.Gameplay.Movement.performed += context => inputDirection = context.ReadValue<Vector2>();
@@ -27,14 +24,12 @@ public class PlayerController : CharacterController
 
     private void Update()
     {
-        if (IsAttacking)
-        {
+        if (IsDead || IsHitten || IsAttacking) {
             rigidbody.velocity = Vector2.zero;
+            return;
         }
-        else
-        {
-            Move(inputDirection);
-        }
+        
+        Move(inputDirection);
     }
     
     private void Move(Vector2 direction)
@@ -56,11 +51,15 @@ public class PlayerController : CharacterController
 
     private void Attack()
     {
-        if (!IsAttacking)
+        if (!IsDead && !IsHitten)
         {
-            GetComponentInChildren<Weapon>().Attack(whatIsEnemy);
+            if (!IsAttacking)
+            {
+                GetComponentInChildren<Weapon>().Attack(whatIsEnemy);
+            }
+            
+            RaiseAttackEvent();
         }
         
-        RaiseAttackEvent();
     }
 }

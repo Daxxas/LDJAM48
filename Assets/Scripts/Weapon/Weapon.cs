@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    [SerializeField] private int damage;
+    [SerializeField] private int damage = 0;
     [SerializeField] private Transform hitZone;
     
     private CharacterController characterController;
@@ -48,7 +48,11 @@ public class Weapon : MonoBehaviour
 
         foreach (var enemy in result)
         {
-            enemy?.GetComponent<CharacterController>()?.Hit(damage);
+            if (enemy == null)
+                return;
+            
+            Debug.Log("Attacking " + enemy.name);
+            enemy.GetComponent<CharacterController>()?.Hit(damage);
         }
     }
 }

@@ -12,7 +12,16 @@ public abstract class CharacterController : MonoBehaviour
     [SerializeField] protected float moveSpeed = 1f;
 
     [SerializeField] public AnimationClip attackClip;
+    [SerializeField] public AnimationClip hitClip;
+    [SerializeField] private float invincibleDurationAfterHit = 0f;
+    
+    [SerializeField] protected LayerMask whatIsEnemy;
+    private int health;
 
+    public int Health => health;
+    
+    [SerializeField] private int maxHealth = 1;
+    
     public float attackSpeed => attackClip.length;
     
     protected Vector2 direction;
@@ -30,6 +39,24 @@ public abstract class CharacterController : MonoBehaviour
     public event OnHit onHit;
 
     
+    private bool isHitten = false;
+    public bool IsHitten => isHitten;
+
+    public float hitDuration => hitClip.length;
+    
+    public delegate void OnDeath();
+    public event OnDeath onDeath;
+
+    private bool isDead = false;
+    public bool IsDead => isDead;
+    private bool isInvincible = false;
+    
+
+    protected virtual void Start()
+    {
+        health = maxHealth;
+    }
+
     protected void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
@@ -40,18 +67,57 @@ public abstract class CharacterController : MonoBehaviour
         if (!isAttacking)
         {
             isAttacking = true;
-            onAttack?.Invoke();
             Invoke(nameof(EndAttack), attackSpeed);
         }
     }
 
     private void EndAttack()
     {
+        onAttack?.Invoke();
         isAttacking = false;
     }
 
     public void Hit(int damage)
     {
-        onHit?.Invoke();
+        if (!isHitten && !isDead && !isInvincible)
+        {
+            health -= damage;
+
+            if (health <= 0)
+            {
+                onDeath?.Invoke();
+                isDead = true;
+                health = 0;
+                return;
+            }
+
+            isHitten = true;
+            onHit?.Invoke();
+            Invoke(nameof(EndHit), hitDuration);
+        }
+    }
+    
+    private void EndHit()
+    {
+        Debug.Log("End hit");
+        isHitten = false;
+        isInvincible = true;
+        Invoke(nameof(StopInvincibleAfterHit), invincibleDurationAfterHit);
+    }
+
+    private void StopInvincibleAfterHit()
+    {
+        isInvincible = false;
+    }
+
+    
+    
+    void OnDrawGizmos()
+    {
+#if UNITY_EDITOR
+        UnityEditor.Handles.color = Color.white;
+        var position = new Vector3(GetComponent<Collider2D>().bounds.center.x, transform.position.y + GetComponent<Collider2D>().bounds.extents.y + 0.5f, transform.position.z);
+        UnityEditor.Handles.Label( position, health + "/" + maxHealth, new GUIStyle() {fontSize = 20, normal = new GUIStyleState() {textColor = Color.white}});
+#endif
     }
 }

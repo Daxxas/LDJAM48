@@ -21,6 +21,16 @@ public class MonsterAnimationController : AnimationController
         "attack_down",
         "attack_left"
     };
+    
+    private static readonly List<string> HIT = new List<string>()
+    {
+        "hit_up",
+        "hit_right",
+        "hit_down",
+        "hit_left"
+    };
+
+    private static readonly string DEATH = "death";
 
     void Update()
     {
@@ -29,16 +39,19 @@ public class MonsterAnimationController : AnimationController
         switch (characterController.characterState)
         {
             case CharacterState.IDLE:
-                Debug.Log("IDLE ");
-
                 ChangeAnimationState(IDLE);
                 break;
             case CharacterState.WALK:
                 ChangeAnimationState(WALK[currentDirection]);
-                Debug.Log("WALKING " + WALK[currentDirection]);
                 break;
             case CharacterState.ATTACK:
                 ChangeAnimationState(ATTACK[currentDirection]);
+                break;
+            case CharacterState.HIT:
+                ChangeAnimationState(HIT[currentDirection]);
+                break;
+            case CharacterState.DEAD:
+                ChangeAnimationState(DEATH);
                 break;
             default:
                 ChangeAnimationState(IDLE);
