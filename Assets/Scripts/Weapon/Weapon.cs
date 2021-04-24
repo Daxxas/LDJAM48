@@ -48,8 +48,7 @@ public class Weapon : MonoBehaviour
 
         foreach (var enemy in result)
         {
-            enemy?.GetComponent<CharacterController>()?.Hit(damage);
-            Debug.Log("Hitting enemy !");
+            enemy.GetComponent<CharacterController>()?.Hit(damage);
         }
     }
 }
