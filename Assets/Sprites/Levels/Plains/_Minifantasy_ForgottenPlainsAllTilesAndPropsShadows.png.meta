@@ -1,7 +1,244 @@
 fileFormatVersion: 2
 guid: f4fda222fa587c0469b6dbc8e4574315
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -755261342054083730
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_0
+  - first:
+      213: -1231799256918318742
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_1
+  - first:
+      213: 1343749333401436365
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_2
+  - first:
+      213: -2792931458874729739
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_3
+  - first:
+      213: 3470613754353134100
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_4
+  - first:
+      213: 7196066902303299470
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_5
+  - first:
+      213: -5946146447706203223
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_6
+  - first:
+      213: 2520589628933972675
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_7
+  - first:
+      213: -4988212102833022927
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_8
+  - first:
+      213: -5008419276881379299
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_9
+  - first:
+      213: -4854661871295536047
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_10
+  - first:
+      213: -1325583154965138195
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_11
+  - first:
+      213: 4670860097020143744
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_12
+  - first:
+      213: -7132084542890814779
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_13
+  - first:
+      213: 6915933866237805880
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_14
+  - first:
+      213: -2898114557697296480
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_15
+  - first:
+      213: 3081086033830580352
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_16
+  - first:
+      213: -1346400102387459509
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_17
+  - first:
+      213: -2444736253993505488
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_18
+  - first:
+      213: 1137218539879732948
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_19
+  - first:
+      213: 957270495284285770
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_20
+  - first:
+      213: 1364296664252440136
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_21
+  - first:
+      213: 806881108634322006
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_22
+  - first:
+      213: -8509195070012300389
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_23
+  - first:
+      213: -2844791958212718270
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_24
+  - first:
+      213: 3298035694629857307
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_25
+  - first:
+      213: -1278965019380073554
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_26
+  - first:
+      213: 8158475352035604078
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_27
+  - first:
+      213: 8667507686889416417
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_28
+  - first:
+      213: -854848239050872127
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_29
+  - first:
+      213: 2768773420530371211
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_30
+  - first:
+      213: -2336278482377448477
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_31
+  - first:
+      213: -5902966854572760495
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_32
+  - first:
+      213: -3273856569989521850
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_33
+  - first:
+      213: 574684198242718398
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_34
+  - first:
+      213: -3907141097881968709
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_35
+  - first:
+      213: 4661471583749532597
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_36
+  - first:
+      213: 6593732637169649395
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_37
+  - first:
+      213: -433728657693850493
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_38
+  - first:
+      213: -7417471863098048749
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_39
+  - first:
+      213: 1375786376167081101
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_40
+  - first:
+      213: -7662334511419562862
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_41
+  - first:
+      213: -961754578797523849
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_42
+  - first:
+      213: -3907022065602285683
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_43
+  - first:
+      213: -3884685673837378642
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_44
+  - first:
+      213: 879395595307238698
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_45
+  - first:
+      213: -14646200345126865
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_46
+  - first:
+      213: -6310582509457789036
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_47
+  - first:
+      213: -4941213679816581870
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_48
+  - first:
+      213: -8804070433320585431
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_49
+  - first:
+      213: -3188637061841310955
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_50
+  - first:
+      213: -2995196121491583134
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_51
+  - first:
+      213: 6574617790489697848
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_52
+  - first:
+      213: 5399571915928566613
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_53
+  - first:
+      213: 7893679021980824145
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_54
+  - first:
+      213: -6063504154495916544
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_55
+  - first:
+      213: 8355504486272281741
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_56
+  - first:
+      213: 5488438666265830080
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_57
+  - first:
+      213: 5093757518123420011
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_58
+  - first:
+      213: 6741958220361011307
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_59
+  - first:
+      213: -1160294871967989522
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_60
+  - first:
+      213: 157466982220927180
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_61
+  - first:
+      213: -3333994719550372435
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_62
+  - first:
+      213: 647804234359223640
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_63
+  - first:
+      213: 6919791385573871817
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_64
+  - first:
+      213: 9157220557440152111
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_65
+  - first:
+      213: -8926679884429763468
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_66
+  - first:
+      213: -3998681333871121096
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_67
+  - first:
+      213: -7602319233323502440
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_68
+  - first:
+      213: 4464896987254415156
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_69
+  - first:
+      213: -6112695222204400821
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_70
+  - first:
+      213: 395189888180127532
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_71
+  - first:
+      213: 8198089680406320596
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_72
+  - first:
+      213: 1350396435775940803
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_73
+  - first:
+      213: -3145409090938437308
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_74
+  - first:
+      213: -8504853264467978207
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_75
+  - first:
+      213: 612252245107934824
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_76
+  - first:
+      213: -4168655577314489486
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_77
+  - first:
+      213: 8533879555936078085
+    second: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_78
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +269,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -41,12 +278,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 8
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -68,7 +305,43 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -77,7 +350,1666 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_0
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e63184a9fc5c485f0800000000000000
+      internalID: -755261342054083730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_1
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a612bc82a15c7eee0800000000000000
+      internalID: -1231799256918318742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_2
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc08f8436e4f5a210800000000000000
+      internalID: 1343749333401436365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_3
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa12cfb2a38d39d0800000000000000
+      internalID: -2792931458874729739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_4
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41aadcc42d81a2030800000000000000
+      internalID: 3470613754353134100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_5
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 80
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e87dbb3a8b09dd360800000000000000
+      internalID: 7196066902303299470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ab55025f4b0b7da0800000000000000
+      internalID: -5946146447706203223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_7
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c2a421b9eeeaf220800000000000000
+      internalID: 2520589628933972675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_8
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138555a658f46cab0800000000000000
+      internalID: -4988212102833022927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_9
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d10444314358e7ab0800000000000000
+      internalID: -5008419276881379299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_10
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 154ebc8cfb6c0acb0800000000000000
+      internalID: -4854661871295536047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_11
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de4bf00d4259a9de0800000000000000
+      internalID: -1325583154965138195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_12
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 72
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 088ae6ec28a32d040800000000000000
+      internalID: 4670860097020143744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_13
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c250f845eeb50d90800000000000000
+      internalID: -7132084542890814779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_14
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 835c23b85355aff50800000000000000
+      internalID: 6915933866237805880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_15
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a770162a24d7c7d0800000000000000
+      internalID: -2898114557697296480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_16
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08093e86c6732ca20800000000000000
+      internalID: 3081086033830580352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4a55ab8d30a05de0800000000000000
+      internalID: -1346400102387459509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_18
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03da23b645d821ed0800000000000000
+      internalID: -2444736253993505488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_19
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d6158d9c3638cf00800000000000000
+      internalID: 1137218539879732948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_20
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a41d1619178e84d00800000000000000
+      internalID: 957270495284285770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_21
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84e54097694fee210800000000000000
+      internalID: 1364296664252440136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_22
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6544f10e71e923b00800000000000000
+      internalID: 806881108634322006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_23
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b93696fda2449e980800000000000000
+      internalID: -8509195070012300389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_24
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 64
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 241d7de49c44588d0800000000000000
+      internalID: -2844791958212718270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_25
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b18a8f29df9f4cd20800000000000000
+      internalID: 3298035694629857307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_26
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab33b35714304ee0800000000000000
+      internalID: -1278965019380073554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_27
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e66bcd27b1ab83170800000000000000
+      internalID: 8158475352035604078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_28
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e6e20d915c294870800000000000000
+      internalID: 8667507686889416417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_29
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ca21864e08f224f0800000000000000
+      internalID: -854848239050872127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_30
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8a8142a1c8ac6620800000000000000
+      internalID: 2768773420530371211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_31
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e3e081391fd39fd0800000000000000
+      internalID: -2336278482377448477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_32
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1522948cbe2741ea0800000000000000
+      internalID: -5902966854572760495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_33
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64e12349bcce092d0800000000000000
+      internalID: -3273856569989521850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_34
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 56
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb29946cb30b9f700800000000000000
+      internalID: 574684198242718398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_35
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf5a655fdb07c9c0800000000000000
+      internalID: -3907141097881968709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_36
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bbe7f735bfd0b040800000000000000
+      internalID: 4661471583749532597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_37
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f6856ef5e4a18b50800000000000000
+      internalID: 6593732637169649395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_38
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 384404575161bf9f0800000000000000
+      internalID: -433728657693850493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_39
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 48
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31ff594d3a8df0990800000000000000
+      internalID: -7417471863098048749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_40
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d84c24e7b66c71310800000000000000
+      internalID: 1375786376167081101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_41
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 294ee90db5be9a590800000000000000
+      internalID: -7662334511419562862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_42
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77c0ba16e4927a2f0800000000000000
+      internalID: -961754578797523849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_43
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8fa922b12877c9c0800000000000000
+      internalID: -3907022065602285683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_44
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea3cfda26f2d61ac0800000000000000
+      internalID: -3884685673837378642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_45
+      rect:
+        serializedVersion: 2
+        x: 232
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a25c45b72ad343c00800000000000000
+      internalID: 879395595307238698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_46
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f289e1fbb57fbcff0800000000000000
+      internalID: -14646200345126865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_47
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 40
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49fa9fd74ae4c68a0800000000000000
+      internalID: -6310582509457789036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_48
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21d5b3f76584d6bb0800000000000000
+      internalID: -4941213679816581870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_49
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 927386c3698a1d580800000000000000
+      internalID: -8804070433320585431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_50
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51bad438c7fafb3d0800000000000000
+      internalID: -3188637061841310955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_51
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26fcdd92ffcee66d0800000000000000
+      internalID: -2995196121491583134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_52
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83e1a10fb0cbd3b50800000000000000
+      internalID: 6574617790489697848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_53
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55bf814ac022fea40800000000000000
+      internalID: 5399571915928566613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_54
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 152be1c7f3bfb8d60800000000000000
+      internalID: 7893679021980824145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_55
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0066a29e81b1adba0800000000000000
+      internalID: -6063504154495916544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_56
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8c21779f07b4f370800000000000000
+      internalID: 8355504486272281741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_57
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c22b4253e9da2c40800000000000000
+      internalID: 5488438666265830080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_58
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b69c8bf8979a0b640800000000000000
+      internalID: 5093757518123420011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_59
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 32
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b60942fe74f309d50800000000000000
+      internalID: 6741958220361011307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_60
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee004a126fdc5efe0800000000000000
+      internalID: -1160294871967989522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_61
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc09123d26f6f2200800000000000000
+      internalID: 157466982220927180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_62
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da50c2287754bb1d0800000000000000
+      internalID: -3333994719550372435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_63
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 24
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 855b9f8d4867df800800000000000000
+      internalID: 647804234359223640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_64
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c050f04a99080060800000000000000
+      internalID: 6919791385573871817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_65
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f22ff18749bf41f70800000000000000
+      internalID: 9157220557440152111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_66
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47c50f0d0ff0e1480800000000000000
+      internalID: -8926679884429763468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_67
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 16
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83d60a44384d188c0800000000000000
+      internalID: -3998681333871121096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_68
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 894f1a4afe22f7690800000000000000
+      internalID: -7602319233323502440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_69
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43fd204672086fd30800000000000000
+      internalID: 4464896987254415156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_70
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4b7744f4185b2ba0800000000000000
+      internalID: -6112695222204400821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_71
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c278dc70c1ffb7500800000000000000
+      internalID: 395189888180127532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_72
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d51a65012775c170800000000000000
+      internalID: 8198089680406320596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_73
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c8e06457629db210800000000000000
+      internalID: 1350396435775940803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_74
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 441845dc8134954d0800000000000000
+      internalID: -3145409090938437308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_75
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12890904401b8f980800000000000000
+      internalID: -8504853264467978207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_76
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 866089e4c282f7800800000000000000
+      internalID: 612252245107934824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_77
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27b0833c6d5f526c0800000000000000
+      internalID: -4168655577314489486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: _Minifantasy_ForgottenPlainsAllTilesAndPropsShadows_78
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 8
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 509c98fdd3e6e6670800000000000000
+      internalID: 8533879555936078085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
