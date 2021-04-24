@@ -3,43 +3,65 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(InputManager))]
 public class PlayerController : CharacterController
 {
-    [SerializeField] private float moveSpeed = 1f;
-    
-    private Rigidbody2D rigidbody;
     private InputManager inputManager;
 
-    void Awake()
+    private Vector2 inputDirection;
+    
+    [SerializeField] private LayerMask whatIsEnemy;
+
+    
+    
+    
+    void Start()
     {
-        inputManager.playerInputs.Gameplay.Movement.performed += context => Move(context.ReadValue<Vector2>());
-        inputManager.playerInputs.Gameplay.Movement.canceled += context => Move(context.ReadValue<Vector2>());
+        inputManager = GetComponent<InputManager>();
+        
+        inputManager.playerInputs.Gameplay.Movement.performed += context => inputDirection = context.ReadValue<Vector2>();
+        inputManager.playerInputs.Gameplay.Movement.canceled += context => inputDirection = context.ReadValue<Vector2>();
+
+        inputManager.playerInputs.Gameplay.Attack.performed += context => Attack();
     }
 
-    private void Start()
+    private void Update()
     {
-        rigidbody = GetComponent<Rigidbody2D>();
-        inputManager = GetComponent<InputManager>();
+        if (IsAttacking)
+        {
+            rigidbody.velocity = Vector2.zero;
+        }
+        else
+        {
+            Move(inputDirection);
+        }
     }
     
     private void Move(Vector2 direction)
     {
-        this.direction = direction;
-        
-        Debug.Log(direction.magnitude);
-        if (direction.magnitude > 0.1f)
+        if(!IsAttacking)
         {
-            rigidbody.velocity = direction * moveSpeed;
-        }
-        else
-        {
-            rigidbody.velocity = Vector2.zero;
+            this.direction = direction;
+            
+            if (direction.magnitude > 0.1f)
+            {
+                rigidbody.velocity = direction * moveSpeed;
+            }
+            else
+            {
+                rigidbody.velocity = Vector2.zero;
+            }
         }
     }
 
     private void Attack()
     {
+        if (!IsAttacking)
+        {
+            Debug.Log("Player attacking !");
+            GetComponentInChildren<Weapon>().Attack(whatIsEnemy);
+        }
         
+        RaiseAttackEvent();
     }
 }
