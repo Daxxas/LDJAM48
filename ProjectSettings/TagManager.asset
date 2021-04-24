@@ -38,6 +38,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Terrain
+    uniqueID: 3943715417
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Prop
+    uniqueID: 1732367059
+    locked: 0
+  - name: Enemy
+    uniqueID: 4157900185
+    locked: 0
+  - name: Player
+    uniqueID: 930115953
     locked: 0
