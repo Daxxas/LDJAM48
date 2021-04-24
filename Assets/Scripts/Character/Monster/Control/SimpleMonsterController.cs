@@ -8,6 +8,7 @@ public class SimpleMonsterController : CharacterController
     private Transform target;
 
     [SerializeField] private float eyeReach = 10f;
+    [SerializeField] private float stoppingDistance = 1f;
     
     void Start()
     {
@@ -17,8 +18,10 @@ public class SimpleMonsterController : CharacterController
 
     void Update()
     {
-        if (Vector2.Distance(transform.position, target.position) < eyeReach)
+        if (Vector2.Distance(transform.position, target.position) < eyeReach && Vector2.Distance(transform.position, target.position) > stoppingDistance)
         {
+            direction = (target.position - transform.position).normalized;
+            Debug.Log(direction);
             characterState = CharacterState.WALK;
             transform.position = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
         }

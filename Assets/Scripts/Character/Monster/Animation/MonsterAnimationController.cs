@@ -24,13 +24,18 @@ public class MonsterAnimationController : AnimationController
 
     void Update()
     {
+        base.Update();
+        
         switch (characterController.characterState)
         {
             case CharacterState.IDLE:
+                Debug.Log("IDLE ");
+
                 ChangeAnimationState(IDLE);
                 break;
             case CharacterState.WALK:
                 ChangeAnimationState(WALK[currentDirection]);
+                Debug.Log("WALKING " + WALK[currentDirection]);
                 break;
             case CharacterState.ATTACK:
                 ChangeAnimationState(ATTACK[currentDirection]);

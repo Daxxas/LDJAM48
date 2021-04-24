@@ -25,20 +25,34 @@ public abstract class AnimationController : MonoBehaviour
     protected void UpdateCurrentDirection()
     {
         var normalizedDirection = characterController.Direction.normalized;
-
-        if (normalizedDirection.x > 0)
+        
+        if (normalizedDirection.y > 0.75f)
+        {
+            if (normalizedDirection.x >= 0)
+            {
+                currentDirection = 0;
+            }
+            else
+            {
+                currentDirection = 2;
+            }
+        }
+        else if (normalizedDirection.y < -0.75f)
+        {
+            if (normalizedDirection.x >= 0)
+            {
+                currentDirection = 1;
+            }
+            else
+            {
+                currentDirection = 3;
+            }
+        }
+        else if (normalizedDirection.x > 0.75f)
         {
             currentDirection = 1;
         }
-        else if (normalizedDirection.x < 0)
-        {
-            currentDirection = 3;
-        }
-        else if (normalizedDirection.y > 0)
-        {
-            currentDirection = 0;
-        }
-        else if (normalizedDirection.y < 0)
+        else if (normalizedDirection.x < -0.75f)
         {
             currentDirection = 3;
         }

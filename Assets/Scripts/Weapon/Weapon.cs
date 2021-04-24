@@ -38,7 +38,6 @@ public class Weapon : MonoBehaviour
 
     public void Attack(LayerMask whatIsEnemy)
     {
-        Debug.Log("Weapon attacking !");
         Collider2D[] result = new Collider2D[3];
 
         
