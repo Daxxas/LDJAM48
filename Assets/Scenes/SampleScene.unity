@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie
       objectReference: {fileID: 0}
+    - target: {fileID: 192060190927630458, guid: 54c07fce675be9d42a20c39618662cb1, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 192060190927630459, guid: 54c07fce675be9d42a20c39618662cb1, type: 3}
       propertyPath: whatIsEnemy.m_Bits
       value: 256
