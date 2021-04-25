@@ -204,13 +204,18 @@ MonoBehaviour:
   characterState: 0
   moveSpeed: 1
   attackClip: {fileID: 7400000, guid: f4065d3c42cd54c4f8601090c129aea6, type: 2}
-  hitClip: {fileID: 7400000, guid: e4fa5cd56901ff749ae119675a184693, type: 2}
   invincibleDurationAfterHit: 0
+  knockbackResistance: 0
+  hitDuration: 1
+  hitBlinkFrequence: 0.15
+  hitColor: {r: 1, g: 0, b: 0, a: 1}
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 256
   maxHealth: 5
+  momentumCoef: 5
   eyeReach: 20
+  attackDashForce: 0
 --- !u!1 &6831743609064733627
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,8 +260,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0f50303db6a3f4b99c9e1d808c3aac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponPrefab: {fileID: 0}
   weaponType: 0
+  droppedSprite: {fileID: 0}
   damage: 1
+  projectile: {fileID: 0}
+  knockback: 0
   hitZone: {fileID: 6831743609064733626}
 --- !u!61 &6831743609064733629
 BoxCollider2D:

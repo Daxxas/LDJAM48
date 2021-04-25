@@ -191,5 +191,5 @@ MonoBehaviour:
   droppedSprite: {fileID: 166120022497514764, guid: 6f96f770769a27c4ca608879b59d62db, type: 3}
   damage: 1
   projectile: {fileID: 0}
-  knockback: 0
+  knockback: 5
   hitZone: {fileID: 1686159546}
