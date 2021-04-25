@@ -48,26 +48,34 @@ public class Weapon : MonoBehaviour
 
     public void Attack(LayerMask whatIsEnemy)
     {
-        if (weaponType != WeaponType.Shot)
+   
+        Collider2D[] result = new Collider2D[3];
+
+        ContactFilter2D filter = new ContactFilter2D();
+        filter.SetLayerMask(whatIsEnemy);
+        
+        GetComponentInChildren<Collider2D>().OverlapCollider(filter, result);
+
+        foreach (var enemy in result)
         {
-            Collider2D[] result = new Collider2D[3];
-
-            ContactFilter2D filter = new ContactFilter2D();
-            filter.SetLayerMask(whatIsEnemy);
+            if (enemy == null)
+                return;
             
-            GetComponentInChildren<Collider2D>().OverlapCollider(filter, result);
-
-            foreach (var enemy in result)
-            {
-                if (enemy == null)
-                    return;
-                
-                enemy.GetComponent<CharacterController>()?.Hit(transform.position, damage, knockback);
-            }
+            enemy.GetComponent<CharacterController>()?.Hit(transform.position, damage, knockback);
         }
-        else
+   
+    }
+
+    public void Shoot()
+    {
+        if (weaponType == WeaponType.Shot)
         {
             var instantiatedProjectile = Instantiate(projectile, transform.position, hitZone.transform.rotation);
+
+            var projectileComp = instantiatedProjectile.GetComponent<Projectile>();
+            projectileComp.damage = damage;
+            projectileComp.knockback = knockback;
+            projectileComp.whatIsEnemy = characterController.whatIsEnemy;
         }
     }
 }

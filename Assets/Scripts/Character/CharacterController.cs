@@ -19,7 +19,7 @@ public abstract class CharacterController : MonoBehaviour
     [SerializeField] public AnimationClip hitClip;
     [SerializeField] private float invincibleDurationAfterHit = 0f;
     
-    [SerializeField] protected LayerMask whatIsEnemy;
+    public LayerMask whatIsEnemy;
     private int health;
 
     public int Health => health;
