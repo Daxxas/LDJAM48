@@ -12,7 +12,7 @@ public class LevelGenerator : MonoBehaviour
     private void Start()
     {
         levels = Resources.LoadAll<LevelModule>("Levels");
-        GenerateLevel(LevelBiome.Plains, 2);
+        GenerateLevel(LevelBiome.Plains, 1);
     }
 
     private void GenerateLevel(LevelBiome levelBiome, int size)
@@ -27,7 +27,7 @@ public class LevelGenerator : MonoBehaviour
         LevelModule[] tops = Array.FindAll(levelsForBiome,
             level => level.GetComponent<LevelModule>().levelType == LevelType.Top);
 
-        foreach (var bottomGameObject in bottoms[Random.Range(0, bottoms.Length)].GetLevelModuleData())
+        foreach (GameObject bottomGameObject in bottoms[Random.Range(0, bottoms.Length)].GetLevelModuleData())
         {
             Instantiate(
                 bottomGameObject,
@@ -39,7 +39,7 @@ public class LevelGenerator : MonoBehaviour
 
         for (int i = 1; i <= size; i++)
         {
-            foreach (var middleGameObject in middles[Random.Range(0, middles.Length)].GetLevelModuleData())
+            foreach (GameObject middleGameObject in middles[Random.Range(0, middles.Length)].GetLevelModuleData())
             {
                 Instantiate(
                     middleGameObject,
@@ -52,7 +52,7 @@ public class LevelGenerator : MonoBehaviour
 
         
         
-        foreach (var topGameObject in tops[Random.Range(0, tops.Length)].GetLevelModuleData())
+        foreach (GameObject topGameObject in tops[Random.Range(0, tops.Length)].GetLevelModuleData())
         {
             Instantiate(
                 topGameObject,

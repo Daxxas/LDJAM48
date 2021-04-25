@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 [RequireComponent(typeof(InputManager))]
@@ -71,10 +72,23 @@ public class PlayerController : CharacterController
 
     private void Interact()
     {
-        Collider2D interactable = Physics2D.OverlapCircle(transform.position, 1F, interactableLayerMask.value);
-        if (interactable != null)
+        Collider2D[] interactables = Physics2D.OverlapCircleAll(transform.position, 1F, interactableLayerMask.value);
+        if (interactables.Length > 0)
         {
-            interactable.GetComponent<Interactable>().Interact(characterController);
+            Collider2D closest = interactables[0];
+            float closestDistance = float.MaxValue;
+            
+            foreach (Collider2D interactable in interactables)
+            {
+                float distance = Vector3.Distance(transform.position, interactable.transform.position);
+                if (distance < closestDistance)
+                {
+                    closestDistance = distance;
+                    closest = interactable;
+                }
+            }
+
+            closest.GetComponent<Interactable>().Interact(characterController);
         }
     }
 }
