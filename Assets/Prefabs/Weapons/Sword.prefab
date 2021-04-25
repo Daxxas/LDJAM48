@@ -189,7 +189,7 @@ MonoBehaviour:
   weaponPrefab: {fileID: 4817508584529260022}
   weaponType: 1
   droppedSprite: {fileID: 166120022497514764, guid: 6f96f770769a27c4ca608879b59d62db, type: 3}
-  damage: 0
+  damage: 1
   projectile: {fileID: 0}
   knockback: 0
   hitZone: {fileID: 1686159546}

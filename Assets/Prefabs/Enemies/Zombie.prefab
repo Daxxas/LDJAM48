@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0f50303db6a3f4b99c9e1d808c3aac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponPrefab: {fileID: 0}
   weaponType: 0
   droppedSprite: {fileID: 0}
   damage: 1
@@ -252,7 +253,7 @@ MonoBehaviour:
   invincibleDurationAfterHit: 0
   whatIsEnemy:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 256
   maxHealth: 3
   momentumCoef: 5
   eyeReach: 10
