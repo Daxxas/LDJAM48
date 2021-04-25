@@ -1,4 +1,4 @@
 public enum WeaponType
 {
-    Default, Slash, Thrust
+    Default, Slash, Thrust, Shot
 }

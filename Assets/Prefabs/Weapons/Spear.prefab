@@ -131,6 +131,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponType: 2
   damage: 1
+  projectile: {fileID: 0}
+  knockback: 0
   hitZone: {fileID: 8610545268216518000}
 --- !u!1 &8610545268216518003
 GameObject:

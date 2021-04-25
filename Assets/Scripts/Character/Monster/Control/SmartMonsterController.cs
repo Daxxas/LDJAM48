@@ -34,7 +34,15 @@ public class SmartMonsterController : CharacterController
         
         if (IsDead)
         {
+            if (agent.enabled)
+            {
+                agent.ResetPath();
+                agent.enabled = false;
+                GetComponent<SpriteRenderer>().sortingOrder = -1;
+            }
+            
             rigidbody.velocity = Vector2.zero;
+            rigidbody.isKinematic = true;
             characterState = CharacterState.DEAD;
             return;
         }
@@ -55,22 +63,33 @@ public class SmartMonsterController : CharacterController
         {
             if (Vector2.Distance(transform.position, target.position) < eyeReach)
             {
-                agent.isStopped = false;
 
                 characterState = CharacterState.WALK;
 
-                agent.SetDestination(target.position);
+                if (agent.enabled)
+                {
+                    agent.isStopped = false;
+                    agent.SetDestination(target.position);
+                }
             }
             else
             {
                 characterState = CharacterState.IDLE; 
-                agent.isStopped = true;
+                rigidbody.velocity = Vector2.zero;
+                if (agent.enabled)
+                {
+                    agent.velocity = Vector3.zero;
+                    agent.isStopped = true;
+                }
             }
         }
         else
         {
-            agent.velocity = Vector3.zero;
-            agent.isStopped = true;
+            if (agent.enabled)
+            {
+                agent.velocity = Vector3.zero;
+                agent.isStopped = true;
+            }
             
             if (!IsAttacking && targetController.Health > 0)
             {
@@ -87,8 +106,11 @@ public class SmartMonsterController : CharacterController
 
     public override void Hit(Vector2 source, int damage, float knockbackForce)
     {
-        agent.velocity = Vector3.zero;
-        agent.isStopped = true;
+        if (agent.enabled)
+        {
+            agent.velocity = Vector3.zero;
+            agent.isStopped = true;
+        }
         
         base.Hit(source, damage, knockbackForce);
     }

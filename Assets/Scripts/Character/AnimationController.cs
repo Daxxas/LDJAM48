@@ -6,12 +6,11 @@ public abstract class AnimationController : MonoBehaviour
 {
     protected CharacterController characterController;
     protected Animator animator;
-
+    
     protected string currentAnimation;
     protected int currentDirection = 1;
     protected int currentAttackDirection = 1;
-
-
+    
     protected virtual void Start()
     {
         animator = GetComponent<Animator>();

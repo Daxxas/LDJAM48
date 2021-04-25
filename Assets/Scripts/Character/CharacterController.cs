@@ -26,7 +26,7 @@ public abstract class CharacterController : MonoBehaviour
     
     [SerializeField] private int maxHealth = 1;
     
-    public float attackSpeed => attackClip.length;
+    public float AttackSpeed => attackClip.length;
     
     protected Vector2 direction;
     public Vector2 Direction => direction;
@@ -70,10 +70,13 @@ public abstract class CharacterController : MonoBehaviour
 
     protected virtual void Update()
     {
-        if (momentum.magnitude > 0.2f)
+        if (!isDead)
         {
-            momentum = Vector2.Lerp(momentum, Vector3.zero, momentumCoef * Time.deltaTime);
-            rigidbody.velocity = momentum;
+            if (momentum.magnitude > 0.2f)
+            {
+                momentum = Vector2.Lerp(momentum, Vector3.zero, momentumCoef * Time.deltaTime);
+                rigidbody.velocity = momentum;
+            }
         }
     }
 
@@ -82,7 +85,7 @@ public abstract class CharacterController : MonoBehaviour
         if (!isAttacking)
         {
             isAttacking = true;
-            Invoke(nameof(EndAttack), attackSpeed);
+            Invoke(nameof(EndAttack), AttackSpeed);
         }
     }
 
@@ -103,6 +106,7 @@ public abstract class CharacterController : MonoBehaviour
             if (health <= 0)
             {
                 onDeath?.Invoke();
+                rigidbody.isKinematic = true;
                 isDead = true;
                 health = 0;
                 return;
@@ -135,9 +139,15 @@ public abstract class CharacterController : MonoBehaviour
         momentum += impactDirection.normalized * force;
     }
 
+
     public void Heal(int healAmount)
     {
         health = Mathf.Clamp(health + healAmount, 0, maxHealth);
+    }
+
+    public void UpdateAttackAnimationClip(AnimationClip newClip)
+    {
+        attackClip = newClip;
     }
     
     void OnDrawGizmos()

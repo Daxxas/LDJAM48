@@ -36,6 +36,14 @@ public class PlayerAnimationController : AnimationController
         "Thrust_up_left",
         "Thrust_left"
     };
+    
+    private static readonly List<string> SHOT_ATTACK = new List<string>()
+    {
+        "shoot_up",
+        "shoot_right",
+        "shoot_down",
+        "shoot_left"
+    };
 
     
     private static readonly List<string> HIT = new List<string>()
@@ -90,6 +98,9 @@ public class PlayerAnimationController : AnimationController
                     break;
                 case WeaponType.Thrust:
                     ChangeAnimationState(THRUST_ATTACK[currentAttackDirection]);
+                    break;
+                case WeaponType.Shot:
+                    ChangeAnimationState(SHOT_ATTACK[currentAttackDirection]);
                     break;
                 default:
                     break;

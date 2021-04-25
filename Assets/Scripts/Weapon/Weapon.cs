@@ -8,9 +8,13 @@ public class Weapon : MonoBehaviour
     [SerializeField] private WeaponType weaponType;
 
     public WeaponType WeaponType => weaponType;
-
-
+    
     [SerializeField] private int damage = 0;
+    
+    [Header("Weapon Shot Options")] [SerializeField]
+    private GameObject projectile;
+    
+    [Header("Weapon Close Options")]
     [SerializeField] private float knockback = 0;
     [SerializeField] private Transform hitZone;
     
@@ -44,20 +48,26 @@ public class Weapon : MonoBehaviour
 
     public void Attack(LayerMask whatIsEnemy)
     {
-        Collider2D[] result = new Collider2D[3];
-
-        
-        ContactFilter2D filter = new ContactFilter2D();
-        filter.SetLayerMask(whatIsEnemy);
-        
-        GetComponentInChildren<Collider2D>().OverlapCollider(filter, result);
-
-        foreach (var enemy in result)
+        if (weaponType != WeaponType.Shot)
         {
-            if (enemy == null)
-                return;
+            Collider2D[] result = new Collider2D[3];
+
+            ContactFilter2D filter = new ContactFilter2D();
+            filter.SetLayerMask(whatIsEnemy);
             
-            enemy.GetComponent<CharacterController>()?.Hit(transform.position, damage, knockback);
+            GetComponentInChildren<Collider2D>().OverlapCollider(filter, result);
+
+            foreach (var enemy in result)
+            {
+                if (enemy == null)
+                    return;
+                
+                enemy.GetComponent<CharacterController>()?.Hit(transform.position, damage, knockback);
+            }
+        }
+        else
+        {
+            Instantiate(projectile);
         }
     }
 }
