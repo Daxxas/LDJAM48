@@ -18,7 +18,8 @@ public class SmartMonsterController : CharacterController
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
-        
+
+        transform.eulerAngles = new Vector3(0, 0, 0);
         
         targetController = GameObject.FindObjectOfType<PlayerController>(); 
         target = targetController?.transform; 
