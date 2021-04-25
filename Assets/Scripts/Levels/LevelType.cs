@@ -2,5 +2,6 @@
 {
     Bottom,
     Middle,
-    Top
+    Top,
+    Bonus
 }

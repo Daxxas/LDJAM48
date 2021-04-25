@@ -123,8 +123,11 @@ MonoBehaviour:
   characterState: 0
   moveSpeed: 1
   attackClip: {fileID: 0}
-  hitClip: {fileID: 0}
   invincibleDurationAfterHit: 0
+  knockbackResistance: 0
+  hitDuration: 1
+  hitBlinkFrequence: 0.15
+  hitColor: {r: 0, g: 0, b: 0, a: 0}
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 0
