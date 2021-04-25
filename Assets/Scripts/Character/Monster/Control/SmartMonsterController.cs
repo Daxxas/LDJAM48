@@ -12,6 +12,8 @@ public class SmartMonsterController : CharacterController
     
 
     [SerializeField] private float eyeReach = 10f;
+    [SerializeField] private float attackDashForce = 0f; 
+
     void Start() {
         base.Start();
         
@@ -32,6 +34,7 @@ public class SmartMonsterController : CharacterController
         
         if (IsDead)
         {
+            rigidbody.velocity = Vector2.zero;
             characterState = CharacterState.DEAD;
             return;
         }
@@ -88,5 +91,12 @@ public class SmartMonsterController : CharacterController
         agent.isStopped = true;
         
         base.Hit(source, damage, knockbackForce);
+    }
+    
+    
+    private void Charge()
+    {
+        Vector2 toTarget = (target.position - transform.position).normalized;
+        AddImpact(toTarget, attackDashForce);
     }
 }
