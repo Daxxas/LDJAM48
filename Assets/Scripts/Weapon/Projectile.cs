@@ -25,7 +25,7 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (GetComponent<Collider2D>().IsTouchingLayers(LayerMask.GetMask("Wall")))
+        if( LayerMask.GetMask("Wall") == (LayerMask.GetMask("Wall") | (1 << other.GetComponent<Collider2D>().gameObject.layer)))
         {
             Destroy(gameObject);
         }
