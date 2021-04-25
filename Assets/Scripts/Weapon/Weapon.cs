@@ -58,7 +58,6 @@ public class Weapon : MonoBehaviour
         GetComponentInChildren<Collider2D>().OverlapCollider(filter, result);
 
 
-            
         foreach (var enemy in result)
         {
             if (enemy == null)
