@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class InputManager : MonoBehaviour
@@ -14,16 +11,12 @@ public class InputManager : MonoBehaviour
 
     private void OnEnable()
     {
-        playerInputs.Gameplay.Movement.Enable();
-        playerInputs.Gameplay.Dash.Enable();
-        playerInputs.Gameplay.Attack.Enable();
+        playerInputs.Enable();
     }
 
     private void OnDisable()
     {
-        playerInputs.Gameplay.Movement.Disable();
-        playerInputs.Gameplay.Dash.Disable();
-        playerInputs.Gameplay.Attack.Disable();
+        playerInputs.Disable();
     }
     
     

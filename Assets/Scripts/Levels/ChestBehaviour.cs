@@ -1,18 +1,42 @@
-using System.Collections;
-using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using Random = System.Random;
 
 public class ChestBehaviour : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private LootTable lootTable;
+    [SerializeField] private Sprite openSprite;
+
+    private bool isOpened;
+
+    public void Open()
     {
-        
+        if (isOpened) return;
+
+        Random random = new Random();
+        int totalWeight = lootTable.weightedLoots.Sum(loot => loot.probabilityWeight);
+        int randomPick = random.Next(totalWeight) + 1;
+
+        int accumulatedWeight = 0;
+        foreach (Loot loot in lootTable.weightedLoots)
+        {
+            accumulatedWeight += loot.probabilityWeight;
+            if (accumulatedWeight >= randomPick)
+            {
+                isOpened = true;
+                GetComponent<SpriteRenderer>().sprite = openSprite;
+                DropLoot(loot);
+                break;
+            }
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void DropLoot(Loot loot)
     {
-        
+        Instantiate(
+            loot.item,
+            new Vector2(transform.position.x, transform.position.y - 1),
+            loot.item.transform.rotation
+        );
     }
 }
