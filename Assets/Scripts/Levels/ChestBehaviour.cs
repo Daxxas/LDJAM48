@@ -2,14 +2,14 @@ using System.Linq;
 using UnityEngine;
 using Random = System.Random;
 
-public class ChestBehaviour : MonoBehaviour
+public class ChestBehaviour : MonoBehaviour, Interactable
 {
     [SerializeField] private LootTable lootTable;
     [SerializeField] private Sprite openSprite;
 
     private bool isOpened;
 
-    public void Open()
+    public void Interact(CharacterController characterController)
     {
         if (isOpened) return;
 
@@ -24,8 +24,10 @@ public class ChestBehaviour : MonoBehaviour
             if (accumulatedWeight >= randomPick)
             {
                 isOpened = true;
+                gameObject.layer = LayerMask.NameToLayer("Default");
                 GetComponent<SpriteRenderer>().sprite = openSprite;
                 DropLoot(loot);
+                
                 break;
             }
         }

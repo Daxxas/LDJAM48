@@ -134,7 +134,11 @@ public abstract class CharacterController : MonoBehaviour
         Debug.Log($"AddImpact called with calculated force : {impactDirection.normalized} * {force} = {impactDirection.normalized * force}");
         momentum += impactDirection.normalized * force;
     }
-    
+
+    public void Heal(int healAmount)
+    {
+        health = Mathf.Clamp(health + healAmount, 0, maxHealth);
+    }
     
     void OnDrawGizmos()
     {

@@ -3,15 +3,17 @@ using UnityEngine;
 [RequireComponent(typeof(InputManager))]
 public class PlayerController : CharacterController
 {
-    [SerializeField] private LayerMask chestLayerMask;
+    [SerializeField] private LayerMask interactableLayerMask;
 
     private InputManager inputManager;
     private Vector2 inputDirection;
+    private CharacterController characterController;
 
     void Start()
     {
         base.Start();
-
+        
+        characterController = GetComponent<CharacterController>();
         inputManager = GetComponent<InputManager>();
 
         inputManager.playerInputs.Gameplay.Movement.performed +=
@@ -21,7 +23,7 @@ public class PlayerController : CharacterController
 
         inputManager.playerInputs.Gameplay.Attack.performed += context => Attack();
 
-        inputManager.playerInputs.Gameplay.OpenChest.performed += context => OpenChest();
+        inputManager.playerInputs.Gameplay.Interact.performed += context => Interact();
     }
 
     private void Update()
@@ -67,12 +69,12 @@ public class PlayerController : CharacterController
         }
     }
 
-    private void OpenChest()
+    private void Interact()
     {
-        Collider2D chest = Physics2D.OverlapCircle(transform.position, 1F, chestLayerMask.value);
-        if (chest != null)
+        Collider2D interactable = Physics2D.OverlapCircle(transform.position, 1F, interactableLayerMask.value);
+        if (interactable != null)
         {
-            chest.GetComponent<ChestBehaviour>().Open();
+            interactable.GetComponent<Interactable>().Interact(characterController);
         }
     }
 }

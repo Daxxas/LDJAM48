@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: BasicLootTable
   m_EditorClassIdentifier: 
   weightedLoots:
-  - item: {fileID: 6657849826686040334, guid: c2bc447ab88cecd4e90c0250287cce53, type: 3}
+  - item: {fileID: 3767926407426108966, guid: ab5bdfb5a17f67341b08e03f8ada2603, type: 3}
     probabilityWeight: 5
-  - item: {fileID: 192060190927630455, guid: 54c07fce675be9d42a20c39618662cb1, type: 3}
-    probabilityWeight: 10
-  - item: {fileID: 192060190927630455, guid: 4789780e99f1c0240b79a32a70c5a4ff, type: 3}
-    probabilityWeight: 20
+  - item: {fileID: 3767926407426108966, guid: 2a8fc6d483e499d46a195e00de20c55a, type: 3}
+    probabilityWeight: 2
+  - item: {fileID: 3767926407426108966, guid: 96755787fbba00c4cbfbe99290bc7aad, type: 3}
+    probabilityWeight: 1
