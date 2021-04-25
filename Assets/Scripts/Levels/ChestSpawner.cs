@@ -9,7 +9,7 @@ public class ChestSpawner : MonoBehaviour
     private void Start()
     {
         Random random = new Random();
-        if (random.Next() > spawnProbability)
+        if (spawnProbability > random.NextDouble())
         {
             SpawnChest();
         }

@@ -44,7 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0f50303db6a3f4b99c9e1d808c3aac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponType: 0
   damage: 1
+  knockback: 0
   hitZone: {fileID: 1726051011}
 --- !u!61 &1726051012
 BoxCollider2D:
@@ -180,7 +182,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &192060190927630459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,12 +199,15 @@ MonoBehaviour:
   moveSpeed: 1
   attackClip: {fileID: 7400000, guid: 9ad830d515c627147ac263b001296d35, type: 2}
   hitClip: {fileID: 7400000, guid: 98e787b28d0224f40938a1a41d78b764, type: 2}
+  invincibleDurationAfterHit: 0
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 128
   maxHealth: 2
+  momentumCoef: 5
   eyeReach: 10
   stoppingDistance: 1
+  attackDashForce: 0
 --- !u!95 &192060190927630452
 Animator:
   serializedVersion: 3

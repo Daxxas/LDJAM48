@@ -107,7 +107,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &192060190927630459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,8 +123,16 @@ MonoBehaviour:
   characterState: 0
   moveSpeed: 1
   attackClip: {fileID: 0}
+  hitClip: {fileID: 0}
+  invincibleDurationAfterHit: 0
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 0
+  maxHealth: 1
+  momentumCoef: 5
   eyeReach: 10
   stoppingDistance: 1
+  attackDashForce: 0
 --- !u!95 &192060190927630452
 Animator:
   serializedVersion: 3
