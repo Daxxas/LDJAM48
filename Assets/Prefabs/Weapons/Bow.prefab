@@ -72,9 +72,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingLayerID: 930115953
+  m_SortingLayer: 3
+  m_SortingOrder: 3
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -131,7 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponType: 3
   damage: 1
-  projectile: {fileID: 0}
+  projectile: {fileID: 2271048842113884625, guid: 5cfa8042c2f463f4ab079b30dec3e680, type: 3}
   knockback: 10
   hitZone: {fileID: 2558953940533621854}
 --- !u!1 &7665858053464776335

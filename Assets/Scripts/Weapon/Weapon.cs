@@ -67,7 +67,7 @@ public class Weapon : MonoBehaviour
         }
         else
         {
-            Instantiate(projectile);
+            var instantiatedProjectile = Instantiate(projectile, transform.position, hitZone.transform.rotation);
         }
     }
 }

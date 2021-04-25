@@ -60,7 +60,12 @@ public abstract class CharacterController : MonoBehaviour
     protected virtual void Start()
     {
         health = maxHealth;
-        currentWeaponType = GetComponentInChildren<Weapon>().WeaponType;
+
+        var weapon = GetComponentInChildren<Weapon>();
+        if (weapon != null)
+        {
+            currentWeaponType = weapon.WeaponType;
+        }
     }
 
     protected void Awake()
