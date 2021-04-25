@@ -51,7 +51,6 @@ public class Weapon : MonoBehaviour
             if (enemy == null)
                 return;
             
-            Debug.Log("Attacking " + enemy.name);
             enemy.GetComponent<CharacterController>()?.Hit(damage);
         }
     }

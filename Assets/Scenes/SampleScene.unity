@@ -371,12 +371,12 @@ MonoBehaviour:
   characterState: 0
   moveSpeed: 10
   attackClip: {fileID: 7400000, guid: e3270da03ecbc674d8b30535c048c7b7, type: 2}
-  hitClip: {fileID: 0}
+  hitClip: {fileID: 7400000, guid: 50bc5915979354245a4e6c853d71460a, type: 2}
   invincibleDurationAfterHit: 0
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 128
-  maxHealth: 1
+  maxHealth: 3
 --- !u!50 &919913860
 Rigidbody2D:
   serializedVersion: 4

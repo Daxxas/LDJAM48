@@ -17,7 +17,7 @@ public class SimpleMonsterController : CharacterController
         
          characterState = CharacterState.IDLE;
          targetController = GameObject.FindObjectOfType<PlayerController>(); 
-         target = targetController.transform; 
+         target = targetController?.transform; 
     }
 
     void Update()
@@ -34,6 +34,9 @@ public class SimpleMonsterController : CharacterController
             return;
         }
 
+        if (target == null)
+            return;
+        
         if (Vector2.Distance(transform.position, target.position) > stoppingDistance)
         {
             if (Vector2.Distance(transform.position, target.position) < eyeReach)
@@ -52,7 +55,6 @@ public class SimpleMonsterController : CharacterController
         {
             if (!IsAttacking && targetController.Health > 0)
             {
-                Debug.Log("Starting attack...");
                 RaiseAttackEvent();
                 characterState = CharacterState.ATTACK;
             }

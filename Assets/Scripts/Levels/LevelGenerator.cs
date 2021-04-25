@@ -1,50 +1,69 @@
 using System;
 using UnityEngine;
+using UnityEngine.AI;
 using Random = System.Random;
 
 public class LevelGenerator : MonoBehaviour
 {
-    private GameObject[] levels;
+    private LevelModule[] levels;
 
+    [SerializeField] private NavMeshSurface2d navMesh;
+    
     private void Start()
     {
-        levels = Resources.LoadAll<GameObject>("Levels");
+        levels = Resources.LoadAll<LevelModule>("Levels");
         GenerateLevel(LevelBiome.Plains, 2);
     }
 
     private void GenerateLevel(LevelBiome levelBiome, int size)
     {
-        GameObject[] levelsForBiome =
+        LevelModule[] levelsForBiome =
             Array.FindAll(levels, level => level.GetComponent<LevelModule>().levelBiome == levelBiome);
 
-        GameObject[] bottoms = Array.FindAll(levelsForBiome,
+        LevelModule[] bottoms = Array.FindAll(levelsForBiome,
             level => level.GetComponent<LevelModule>().levelType == LevelType.Bottom);
-        GameObject[] middles = Array.FindAll(levelsForBiome,
+        LevelModule[] middles = Array.FindAll(levelsForBiome,
             level => level.GetComponent<LevelModule>().levelType == LevelType.Middle);
-        GameObject[] tops = Array.FindAll(levelsForBiome,
+        LevelModule[] tops = Array.FindAll(levelsForBiome,
             level => level.GetComponent<LevelModule>().levelType == LevelType.Top);
 
         Random random = new Random();
 
-        Instantiate(
-            bottoms[random.Next(bottoms.Length)],
-            new Vector2(0, 0),
-            Quaternion.identity
-        );
-
-        for (int i = 1; i <= size; i++)
+        foreach (var bottomGameObject in bottoms[random.Next(bottoms.Length)].GetLevelModuleData())
         {
             Instantiate(
-                middles[random.Next(middles.Length)],
-                new Vector2(0, 16 * i),
-                Quaternion.identity
+                bottomGameObject,
+                new Vector2(0, 0) + (Vector2) bottomGameObject.transform.position,
+                Quaternion.identity,
+                transform
             );
         }
 
-        Instantiate(
-            tops[random.Next(tops.Length)],
-            new Vector2(0, 16 * (size + 1)),
-            Quaternion.identity
-        );
+        for (int i = 1; i <= size; i++)
+        {
+            foreach (var middleGameObject in middles[random.Next(middles.Length)].GetLevelModuleData())
+            {
+                Instantiate(
+                    middleGameObject,
+                    new Vector2(0, 16 * i) + (Vector2) middleGameObject.transform.position,
+                    Quaternion.identity,
+                    transform
+                );
+            }
+        }
+
+        
+        
+        foreach (var topGameObject in tops[random.Next(tops.Length)].GetLevelModuleData())
+        {
+            Instantiate(
+                topGameObject,
+                new Vector2(0, 16 * (size + 1)) + (Vector2) topGameObject.transform.position,
+                Quaternion.identity,
+                transform
+            );
+        }
+        
+        navMesh.BuildNavMesh();
     }
 }

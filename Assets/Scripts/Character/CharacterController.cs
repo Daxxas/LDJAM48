@@ -99,7 +99,6 @@ public abstract class CharacterController : MonoBehaviour
     
     private void EndHit()
     {
-        Debug.Log("End hit");
         isHitten = false;
         isInvincible = true;
         Invoke(nameof(StopInvincibleAfterHit), invincibleDurationAfterHit);
