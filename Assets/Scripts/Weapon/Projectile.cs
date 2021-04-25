@@ -22,8 +22,6 @@ public class Projectile : MonoBehaviour
         Vector2 forward = new Vector2(fY, fX);
         
         rigidbody.velocity = forward * speed;
-        Debug.Log(forward + " * " + speed);
-        Debug.Log("velocity : " + rigidbody.velocity);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -36,6 +34,7 @@ public class Projectile : MonoBehaviour
         if (GetComponent<Collider2D>().IsTouchingLayers(whatIsEnemy.value))
         {
             other.GetComponent<CharacterController>().Hit(transform.position, damage, knockback);
+            Destroy(gameObject);
         }
     }
 }
