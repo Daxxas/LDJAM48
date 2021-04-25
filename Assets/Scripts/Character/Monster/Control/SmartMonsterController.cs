@@ -49,7 +49,6 @@ public class SmartMonsterController : CharacterController
         if (IsHitten)
         {
             characterState = CharacterState.HIT;
-            return;
         }
 
         if (target == null)

@@ -74,7 +74,7 @@ public class PlayerAnimationController : AnimationController
         
         if (characterController.IsHitten)
         {
-            ChangeAnimationState(HIT[currentDirection]);
+            StartFlashing(characterController.HitColor, characterController.HitDuration, characterController.HitBlinkFrequence);
             return;
         }
         

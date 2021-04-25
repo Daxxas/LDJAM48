@@ -16,12 +16,17 @@ public abstract class CharacterController : MonoBehaviour
     [SerializeField] protected float moveSpeed = 1f;
 
     [SerializeField] public AnimationClip attackClip;
-    [SerializeField] public AnimationClip hitClip;
     [SerializeField] private float invincibleDurationAfterHit = 0f;
-    
+    [SerializeField] [Range(0f, 1f)] private float knockbackResistance = 0f;
+    [SerializeField] private float hitDuration = 0f;
+    [SerializeField] private float hitBlinkFrequence = 0.1f;
+    [SerializeField] private Color hitColor;
     public LayerMask whatIsEnemy;
     private int health;
 
+    public Color HitColor => hitColor;
+    public float HitBlinkFrequence => hitBlinkFrequence;
+    
     public int Health => health;
     
     [SerializeField] private int maxHealth = 1;
@@ -46,7 +51,7 @@ public abstract class CharacterController : MonoBehaviour
     private bool isHitten = false;
     public bool IsHitten => isHitten;
 
-    public float hitDuration => hitClip.length;
+    public float HitDuration => hitDuration;
     
     public delegate void OnDeath();
     public event OnDeath onDeath;
@@ -54,6 +59,9 @@ public abstract class CharacterController : MonoBehaviour
     private bool isDead = false;
     public bool IsDead => isDead;
     private bool isInvincible = false;
+    
+    private Vector2 momentum = Vector2.zero;
+
     
     [SerializeField] private float momentumCoef = 5f;
 
@@ -100,7 +108,6 @@ public abstract class CharacterController : MonoBehaviour
         isAttacking = false;
     }
 
-    private Vector2 momentum = Vector2.zero;
     
     public virtual void Hit(Vector2 source, int damage, float knockbackForce)
     {
@@ -141,7 +148,7 @@ public abstract class CharacterController : MonoBehaviour
 
     public void AddImpact(Vector2 impactDirection, float force)
     {
-        momentum += impactDirection.normalized * force;
+        momentum += impactDirection.normalized * (force * (1-knockbackResistance));
     }
     
     public void Heal(int healAmount)

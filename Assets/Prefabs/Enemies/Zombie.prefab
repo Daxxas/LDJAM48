@@ -249,8 +249,11 @@ MonoBehaviour:
   characterState: 0
   moveSpeed: 1
   attackClip: {fileID: 7400000, guid: 9ad830d515c627147ac263b001296d35, type: 2}
-  hitClip: {fileID: 7400000, guid: 98e787b28d0224f40938a1a41d78b764, type: 2}
   invincibleDurationAfterHit: 0
+  knockbackResistance: 0
+  hitDuration: 1
+  hitBlinkFrequence: 0.15
+  hitColor: {r: 1, g: 0, b: 0, a: 1}
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 256

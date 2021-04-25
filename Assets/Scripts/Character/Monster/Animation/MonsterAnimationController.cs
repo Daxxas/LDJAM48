@@ -32,6 +32,14 @@ public class MonsterAnimationController : AnimationController
 
     private static readonly string DEATH = "death";
 
+    void Start()
+    {
+        base.Start();
+        
+        characterController.onHit += () => StartFlashing(characterController.HitColor, characterController.HitDuration, characterController.HitBlinkFrequence);
+
+    }
+    
     void Update()
     {
         base.Update();
@@ -48,7 +56,6 @@ public class MonsterAnimationController : AnimationController
                 ChangeAnimationState(ATTACK[currentDirection]);
                 break;
             case CharacterState.HIT:
-                ChangeAnimationState(HIT[currentDirection]);
                 break;
             case CharacterState.DEAD:
                 ChangeAnimationState(DEATH);

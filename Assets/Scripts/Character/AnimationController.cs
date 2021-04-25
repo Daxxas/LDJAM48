@@ -88,5 +88,38 @@ public abstract class AnimationController : MonoBehaviour
         animator.Play(newAnimation);
         currentAnimation = newAnimation;
     }
+
+    public void StartFlashing(Color color, float duration, float frequence)
+    {
+        
+        if (frequence <= 0)
+        {
+            StartCoroutine(FlashColor(color, duration, 0.1f));
+        }
+        else
+        {
+            StartCoroutine(FlashColor(color, duration, frequence));
+        }
+        
+    }
     
+    private IEnumerator FlashColor(Color color, float duration, float frequence)
+    {
+        Debug.Log("FlashColor ?");
+        var spriteRenderer = GetComponent<SpriteRenderer>();
+        var initColor = spriteRenderer.color;
+
+        bool isNewColor = false;
+        float timePassed = 0;
+
+        while (timePassed < duration)
+        {
+            spriteRenderer.color = isNewColor? initColor : color;
+            isNewColor = !isNewColor;
+            yield return new WaitForSeconds(frequence);
+            timePassed += frequence;
+        }
+        spriteRenderer.color =  initColor;
+
+    }
 }
