@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
@@ -53,7 +50,6 @@ public class Weapon : MonoBehaviour
 
     public void Attack(LayerMask whatIsEnemy)
     {
-   
         Collider2D[] result = new Collider2D[3];
 
         ContactFilter2D filter = new ContactFilter2D();
@@ -61,14 +57,18 @@ public class Weapon : MonoBehaviour
         
         GetComponentInChildren<Collider2D>().OverlapCollider(filter, result);
 
+
+            
         foreach (var enemy in result)
         {
             if (enemy == null)
-                return;
+                break;
             
             enemy.GetComponent<CharacterController>()?.Hit(transform.position, damage, knockback);
         }
-   
+        
+
+
     }
 
     public void Shoot()

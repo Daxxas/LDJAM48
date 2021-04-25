@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -17,8 +15,6 @@ public class SmartMonsterController : CharacterController
     void Start() {
         base.Start();
 
-        gameObject.layer = LayerMask.NameToLayer("Default");
-        
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
@@ -40,7 +36,7 @@ public class SmartMonsterController : CharacterController
             {
                 agent.ResetPath();
                 agent.enabled = false;
-                GetComponent<SpriteRenderer>().sortingOrder = -1;
+                GetComponent<SpriteRenderer>().sortingOrder = 0;
             }
             
             rigidbody.velocity = Vector2.zero;

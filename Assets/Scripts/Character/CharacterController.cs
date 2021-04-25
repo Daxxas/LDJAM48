@@ -106,6 +106,7 @@ public abstract class CharacterController : MonoBehaviour
     {
         if (!isHitten && !isDead && !isInvincible)
         {
+            Debug.Log("Hit " + gameObject.name + " !");
             health -= damage;
 
             if (health <= 0)
@@ -140,11 +141,9 @@ public abstract class CharacterController : MonoBehaviour
 
     public void AddImpact(Vector2 impactDirection, float force)
     {
-        Debug.Log($"AddImpact called with calculated force : {impactDirection.normalized} * {force} = {impactDirection.normalized * force}");
         momentum += impactDirection.normalized * force;
     }
-
-
+    
     public void Heal(int healAmount)
     {
         health = Mathf.Clamp(health + healAmount, 0, maxHealth);
