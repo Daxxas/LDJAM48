@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weightedLoots:
   - item: {fileID: 4817508584529260022, guid: 83d671bee9765044ba0d8d1205c73b8a, type: 3}
-    probabilityWeight: 2
-  - item: {fileID: 4817508584529260022, guid: 83d671bee9765044ba0d8d1205c73b8a, type: 3}
-    probabilityWeight: 0
+    probabilityWeight: 1
   - item: {fileID: 3865768284636149820, guid: 248b2e3deb61ead409f41eb019821da1, type: 3}
+    probabilityWeight: 1
+  - item: {fileID: 2689539861781523975, guid: 35f67cc3c149cc54d9b0dccd9bab60d5, type: 3}
     probabilityWeight: 1
