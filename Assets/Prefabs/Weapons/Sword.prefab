@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1686159546}
   - component: {fileID: 1686159547}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: hitZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,7 +70,7 @@ GameObject:
   - component: {fileID: 4817508584529260020}
   - component: {fileID: 1954903834}
   - component: {fileID: 1954903837}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,5 +187,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponType: 1
+  droppedSprite: {fileID: 166120022497514764, guid: 6f96f770769a27c4ca608879b59d62db, type: 3}
   damage: 0
+  projectile: {fileID: 0}
+  knockback: 0
   hitZone: {fileID: 1686159546}

@@ -26,8 +26,8 @@ public class ChestBehaviour : MonoBehaviour, Interactable
                 isOpened = true;
                 gameObject.layer = LayerMask.NameToLayer("Default");
                 GetComponent<SpriteRenderer>().sprite = openSprite;
-                DropLoot(loot);
                 
+                DropLoot(loot);
                 break;
             }
         }

@@ -6,13 +6,16 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     [SerializeField] private WeaponType weaponType;
-
     public WeaponType WeaponType => weaponType;
+    
+    [SerializeField] private Sprite droppedSprite;
+    public Sprite DroppedSprite => droppedSprite;
+
     
     [SerializeField] private int damage = 0;
     
-    [Header("Weapon Shot Options")] [SerializeField]
-    private GameObject projectile;
+    [Header("Weapon Shot Options")]
+    [SerializeField] private GameObject projectile;
     
     [Header("Weapon Close Options")]
     [SerializeField] private float knockback = 0;

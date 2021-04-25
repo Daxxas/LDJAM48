@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34f11cd4da9f70947a763f3afe43750b, type: 3}
+  m_Name: BasicPotionLootTable
+  m_EditorClassIdentifier: 
+  weightedLoots:
+  - item: {fileID: 3767926407426108966, guid: ab5bdfb5a17f67341b08e03f8ada2603, type: 3}
+    probabilityWeight: 5
+  - item: {fileID: 3767926407426108966, guid: 2a8fc6d483e499d46a195e00de20c55a, type: 3}
+    probabilityWeight: 2
+  - item: {fileID: 3767926407426108966, guid: 96755787fbba00c4cbfbe99290bc7aad, type: 3}
+    probabilityWeight: 1

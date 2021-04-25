@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2689539861781523973}
   - component: {fileID: 7460231241862362347}
   - component: {fileID: 7460231241862362348}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Bow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,6 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponType: 3
+  droppedSprite: {fileID: -6765633287753241754, guid: 6f96f770769a27c4ca608879b59d62db, type: 3}
   damage: 1
   projectile: {fileID: 2271048842113884625, guid: 5cfa8042c2f463f4ab079b30dec3e680, type: 3}
   knockback: 10
@@ -144,7 +145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2558953940533621854}
   - component: {fileID: 6155099387588806307}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: hitZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
