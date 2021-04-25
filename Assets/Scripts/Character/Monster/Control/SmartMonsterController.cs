@@ -16,6 +16,8 @@ public class SmartMonsterController : CharacterController
 
     void Start() {
         base.Start();
+
+        gameObject.layer = LayerMask.NameToLayer("Default");
         
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;

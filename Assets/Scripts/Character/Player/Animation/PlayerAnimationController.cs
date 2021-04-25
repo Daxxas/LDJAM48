@@ -25,7 +25,7 @@ public class PlayerAnimationController : AnimationController
     {
         "Slash_up_right",
         "Slash_right",
-        "Slash_right",
+        "Slash_rightp",
         "Slash_left"
     };
     

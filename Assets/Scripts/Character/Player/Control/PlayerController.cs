@@ -30,7 +30,7 @@ public class PlayerController : CharacterController
     {
         base.Update();
 
-        if (IsDead || IsHitten || IsAttacking)
+        if (IsDead || IsAttacking)
         {
             rigidbody.velocity = Vector2.zero;
             return;

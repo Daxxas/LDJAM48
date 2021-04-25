@@ -8,7 +8,6 @@ public class Projectile : MonoBehaviour
     private Rigidbody2D rigidbody;
 
     public LayerMask whatIsEnemy;
-
     public int damage = 0;
     public float knockback = 0;
     
@@ -30,11 +29,15 @@ public class Projectile : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-        if (GetComponent<Collider2D>().IsTouchingLayers(whatIsEnemy.value))
+        
+        if( whatIsEnemy == (whatIsEnemy | (1 << other.GetComponent<Collider2D>().gameObject.layer)))
         {
-            other.GetComponent<CharacterController>().Hit(transform.position, damage, knockback);
-            Destroy(gameObject);
+            var characterHit = other.GetComponent<CharacterController>();
+            if (characterHit != null && !characterHit.IsDead)
+            {
+                characterHit.Hit(transform.position, damage, knockback);
+                Destroy(gameObject);
+            }
         }
     }
 }
