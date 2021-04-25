@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.AI;
-using Random = System.Random;
+using Random = UnityEngine.Random;
 
 public class LevelGenerator : MonoBehaviour
 {
@@ -27,9 +27,7 @@ public class LevelGenerator : MonoBehaviour
         LevelModule[] tops = Array.FindAll(levelsForBiome,
             level => level.GetComponent<LevelModule>().levelType == LevelType.Top);
 
-        Random random = new Random();
-
-        foreach (var bottomGameObject in bottoms[random.Next(bottoms.Length)].GetLevelModuleData())
+        foreach (var bottomGameObject in bottoms[Random.Range(0, bottoms.Length)].GetLevelModuleData())
         {
             Instantiate(
                 bottomGameObject,
@@ -41,7 +39,7 @@ public class LevelGenerator : MonoBehaviour
 
         for (int i = 1; i <= size; i++)
         {
-            foreach (var middleGameObject in middles[random.Next(middles.Length)].GetLevelModuleData())
+            foreach (var middleGameObject in middles[Random.Range(0, middles.Length)].GetLevelModuleData())
             {
                 Instantiate(
                     middleGameObject,
@@ -54,7 +52,7 @@ public class LevelGenerator : MonoBehaviour
 
         
         
-        foreach (var topGameObject in tops[random.Next(tops.Length)].GetLevelModuleData())
+        foreach (var topGameObject in tops[Random.Range(0, tops.Length)].GetLevelModuleData())
         {
             Instantiate(
                 topGameObject,

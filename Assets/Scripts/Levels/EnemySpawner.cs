@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-using Random = System.Random;
+using Random = UnityEngine.Random;
 
 public class EnemySpawner : MonoBehaviour
 {
@@ -11,14 +11,13 @@ public class EnemySpawner : MonoBehaviour
 
     void Start()
     {
-        Random random = new Random();
-        int enemyCount = random.Next(min, max + 1);
+        int enemyCount = Random.Range(min, max + 1);
 
         for (int i = 0; i < enemyCount; i++)
         {
             Vector2 enemyPosition = new Vector2(transform.position.x, transform.position.y)
                                     + UnityEngine.Random.insideUnitCircle * radius;
-            int enemyTypeIndex = random.Next(enemyTypes.Count);
+            int enemyTypeIndex = Random.Range(0, enemyTypes.Count);
 
             Instantiate(
                 enemyTypes[enemyTypeIndex],

@@ -1,9 +1,9 @@
+using System;
+using UnityEditor;
 using UnityEngine;
 
 public class DroppedWeapon : MonoBehaviour, Interactable
 {
-    [SerializeField] private GameObject weapon;
-
     private SpriteRenderer spriteRenderer;
 
     private void Start()
@@ -14,18 +14,34 @@ public class DroppedWeapon : MonoBehaviour, Interactable
 
     public void Interact(CharacterController characterController)
     {
-        GameObject currentWeapon = GetCharacterCurrentWeapon(characterController);
-        if (currentWeapon != null)
-        {
-            Destroy(currentWeapon);
-        }
+        GameObject characterWeapon = GetCharacterCurrentWeapon(characterController);
+        PutDroppedWeaponOnPlayer(characterController);
+        DropPlayerWeapon(characterWeapon);
+    }
 
-        GameObject instantiatedWeapon = Instantiate(
-            weapon,
-            characterController.transform.position,
-            weapon.transform.rotation
+    private void PutDroppedWeaponOnPlayer(CharacterController characterController)
+    {
+        GameObject equippedWeapon = Instantiate(
+            transform.GetChild(0).gameObject,
+            characterController.transform
         );
-        instantiatedWeapon.transform.parent = characterController.transform;
+        equippedWeapon.SetActive(true);
+        Destroy(transform.GetChild(0).gameObject);
+    }
+
+    private void DropPlayerWeapon(GameObject characterWeapon)
+    {
+        if (characterWeapon != null)
+        {
+            GameObject droppedWeapon = Instantiate(characterWeapon, transform);
+            droppedWeapon.SetActive(false);
+            SetSprite(characterWeapon);
+            Destroy(characterWeapon);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     private GameObject GetCharacterCurrentWeapon(CharacterController characterController)
@@ -42,6 +58,11 @@ public class DroppedWeapon : MonoBehaviour, Interactable
     }
 
     private void SetSprite()
+    {
+        spriteRenderer.sprite = transform.GetChild(0).GetComponent<Weapon>().DroppedSprite;
+    }
+    
+    private void SetSprite(GameObject weapon)
     {
         spriteRenderer.sprite = weapon.GetComponent<Weapon>().DroppedSprite;
     }

@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    [SerializeField] private GameObject weaponPrefab;
+    public GameObject WeaponPrefab => weaponPrefab;
+    
     [SerializeField] private WeaponType weaponType;
     public WeaponType WeaponType => weaponType;
     
@@ -24,7 +27,6 @@ public class Weapon : MonoBehaviour
     private CharacterController characterController;
 
     public CharacterController CharacterController => characterController;
-
     
     void Start()
     {

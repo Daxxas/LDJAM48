@@ -1,5 +1,5 @@
 using UnityEngine;
-using Random = System.Random;
+using Random = UnityEngine.Random;
 
 public class ChestSpawner : MonoBehaviour
 {
@@ -8,8 +8,7 @@ public class ChestSpawner : MonoBehaviour
 
     private void Start()
     {
-        Random random = new Random();
-        if (spawnProbability > random.NextDouble())
+        if (spawnProbability > Random.value)
         {
             SpawnChest();
         }
