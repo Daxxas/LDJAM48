@@ -55,6 +55,7 @@ public abstract class CharacterController : MonoBehaviour
     public bool IsDead => isDead;
     private bool isInvincible = false;
     
+    [SerializeField] private float momentumCoef = 5f;
 
     protected virtual void Start()
     {
@@ -65,6 +66,15 @@ public abstract class CharacterController : MonoBehaviour
     protected void Awake()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+    }
+
+    protected virtual void Update()
+    {
+        if (momentum.magnitude > 0.2f)
+        {
+            momentum = Vector2.Lerp(momentum, Vector3.zero, momentumCoef * Time.deltaTime);
+            rigidbody.velocity = momentum;
+        }
     }
 
     protected void RaiseAttackEvent()
@@ -82,7 +92,9 @@ public abstract class CharacterController : MonoBehaviour
         isAttacking = false;
     }
 
-    public virtual void Hit(int damage)
+    private Vector2 momentum = Vector2.zero;
+    
+    public virtual void Hit(Vector2 source, int damage, float knockbackForce)
     {
         if (!isHitten && !isDead && !isInvincible)
         {
@@ -96,7 +108,10 @@ public abstract class CharacterController : MonoBehaviour
                 return;
             }
 
+            
             isHitten = true;
+            var knockbackDirection = (Vector2) transform.position - source;
+            AddImpact(knockbackDirection, knockbackForce);
             onHit?.Invoke();
             Invoke(nameof(EndHit), hitDuration);
         }
@@ -114,14 +129,22 @@ public abstract class CharacterController : MonoBehaviour
         isInvincible = false;
     }
 
+    public void AddImpact(Vector2 impactDirection, float force)
+    {
+        Debug.Log($"AddImpact called with calculated force : {impactDirection.normalized} * {force} = {impactDirection.normalized * force}");
+        momentum += impactDirection.normalized * force;
+    }
     
     
     void OnDrawGizmos()
     {
 #if UNITY_EDITOR
-        UnityEditor.Handles.color = Color.white;
-        var position = new Vector3(GetComponent<Collider2D>().bounds.center.x, transform.position.y + GetComponent<Collider2D>().bounds.extents.y + 0.5f, transform.position.z);
-        UnityEditor.Handles.Label( position, health + "/" + maxHealth, new GUIStyle() {fontSize = 20, normal = new GUIStyleState() {textColor = Color.white}});
+        if (Application.isPlaying)
+        {
+            UnityEditor.Handles.color = Color.white;
+            var position = new Vector3(GetComponent<Collider2D>().bounds.center.x, transform.position.y + GetComponent<Collider2D>().bounds.extents.y + 0.5f, transform.position.z);
+            UnityEditor.Handles.Label(position, health + "/" + maxHealth + '\n' + rigidbody?.velocity.ToString(), new GUIStyle() {fontSize = 20, normal = new GUIStyleState() {textColor = Color.white}});
+        }
 #endif
     }
 }

@@ -10,6 +10,7 @@ public class SimpleMonsterController : CharacterController
 
     [SerializeField] private float eyeReach = 10f;
     [SerializeField] private float stoppingDistance = 1f;
+    [SerializeField] private float attackDashForce = 0f; 
     
     void Start()
     {
@@ -22,6 +23,8 @@ public class SimpleMonsterController : CharacterController
 
     void Update()
     {
+        base.Update();
+        
         if (IsDead)
         {
             characterState = CharacterState.DEAD;
@@ -45,10 +48,15 @@ public class SimpleMonsterController : CharacterController
             if (Vector2.Distance(transform.position, target.position) < eyeReach)
             {
                 characterState = CharacterState.WALK;
-                transform.position = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+                // transform.position = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+
+                Vector2 toTarget = (target.position - transform.position).normalized; // this has length 1
+
+                rigidbody.velocity = toTarget * moveSpeed;
             }
             else
             {
+                rigidbody.velocity = Vector2.zero;
                 characterState = CharacterState.IDLE;
 
             }
@@ -57,6 +65,7 @@ public class SimpleMonsterController : CharacterController
         {
             if (!IsAttacking && targetController.Health > 0)
             {
+                rigidbody.velocity = Vector2.zero;
                 RaiseAttackEvent();
                 characterState = CharacterState.ATTACK;
             }
@@ -66,5 +75,11 @@ public class SimpleMonsterController : CharacterController
     private void Attack()
     {
         GetComponentInChildren<Weapon>().Attack(whatIsEnemy);
+    }
+
+    private void Charge()
+    {
+        Vector2 toTarget = (target.position - transform.position).normalized;
+        AddImpact(toTarget, attackDashForce);
     }
 }

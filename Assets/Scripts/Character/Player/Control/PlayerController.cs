@@ -24,6 +24,9 @@ public class PlayerController : CharacterController
 
     private void Update()
     {
+        base.Update();
+
+        
         if (IsDead || IsHitten || IsAttacking) {
             rigidbody.velocity = Vector2.zero;
             return;

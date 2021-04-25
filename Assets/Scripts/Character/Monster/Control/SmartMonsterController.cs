@@ -26,6 +26,9 @@ public class SmartMonsterController : CharacterController
     // Update is called once per frame
     void Update()
     {
+        base.Update();
+
+        
         if (IsDead)
         {
             characterState = CharacterState.DEAD;
@@ -78,11 +81,11 @@ public class SmartMonsterController : CharacterController
         GetComponentInChildren<Weapon>().Attack(whatIsEnemy);
     }
 
-    public override void Hit(int damage)
+    public override void Hit(Vector2 source, int damage, float knockbackForce)
     {
         agent.velocity = Vector3.zero;
         agent.isStopped = true;
         
-        base.Hit(damage);
+        base.Hit(source, damage, knockbackForce);
     }
 }

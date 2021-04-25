@@ -11,6 +11,7 @@ public class Weapon : MonoBehaviour
 
 
     [SerializeField] private int damage = 0;
+    [SerializeField] private float knockback = 0;
     [SerializeField] private Transform hitZone;
     
     private CharacterController characterController;
@@ -56,7 +57,7 @@ public class Weapon : MonoBehaviour
             if (enemy == null)
                 return;
             
-            enemy.GetComponent<CharacterController>()?.Hit(damage);
+            enemy.GetComponent<CharacterController>()?.Hit(transform.position, damage, knockback);
         }
     }
 }
