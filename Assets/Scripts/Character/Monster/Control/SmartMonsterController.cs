@@ -1,25 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class SimpleMonsterController : CharacterController
+public class SmartMonsterController : CharacterController
 {
-    private CharacterState CharacterState => characterState;
+    private NavMeshAgent agent;
     private Transform target;
     private PlayerController targetController;
+    
 
     [SerializeField] private float eyeReach = 10f;
-    [SerializeField] private float stoppingDistance = 1f;
-    
-    void Start()
-    {
+    void Start() {
         base.Start();
         
-         characterState = CharacterState.IDLE;
-         targetController = GameObject.FindObjectOfType<PlayerController>(); 
-         target = targetController?.transform; 
+        agent = GetComponent<NavMeshAgent>();
+        agent.updateRotation = false;
+        agent.updateUpAxis = false;
+        
+        
+        targetController = GameObject.FindObjectOfType<PlayerController>(); 
+        target = targetController?.transform; 
+        
     }
-
+    // Update is called once per frame
     void Update()
     {
         if (IsDead)
@@ -37,24 +41,30 @@ public class SimpleMonsterController : CharacterController
         if (target == null)
             return;
         
-        direction = (target.position - transform.position).normalized;
-
         
-        if (Vector2.Distance(transform.position, target.position) >= stoppingDistance)
+        direction = (target.position - transform.position).normalized;
+        
+        if (Vector2.Distance(transform.position, target.position) >= agent.stoppingDistance)
         {
             if (Vector2.Distance(transform.position, target.position) < eyeReach)
             {
+                agent.isStopped = false;
+
                 characterState = CharacterState.WALK;
-                transform.position = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+
+                agent.SetDestination(target.position);
             }
             else
             {
-                characterState = CharacterState.IDLE;
-
+                characterState = CharacterState.IDLE; 
+                agent.isStopped = true;
             }
         }
         else
         {
+            agent.velocity = Vector3.zero;
+            agent.isStopped = true;
+            
             if (!IsAttacking && targetController.Health > 0)
             {
                 RaiseAttackEvent();
@@ -62,9 +72,17 @@ public class SimpleMonsterController : CharacterController
             }
         }
     }
-
+    
     private void Attack()
     {
         GetComponentInChildren<Weapon>().Attack(whatIsEnemy);
+    }
+
+    public override void Hit(int damage)
+    {
+        agent.velocity = Vector3.zero;
+        agent.isStopped = true;
+        
+        base.Hit(damage);
     }
 }

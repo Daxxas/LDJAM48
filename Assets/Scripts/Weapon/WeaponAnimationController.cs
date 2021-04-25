@@ -29,8 +29,9 @@ public class WeaponAnimationController : AnimationController
         }
         else
         {
-            ChangeAnimationState(ATTACK[currentDirection]);
+            ChangeAnimationState(ATTACK[currentAttackDirection]);
         }
     }
-    
+
+   
 }

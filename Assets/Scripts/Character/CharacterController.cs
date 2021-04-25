@@ -82,7 +82,7 @@ public abstract class CharacterController : MonoBehaviour
         isAttacking = false;
     }
 
-    public void Hit(int damage)
+    public virtual void Hit(int damage)
     {
         if (!isHitten && !isDead && !isInvincible)
         {

@@ -8,25 +8,25 @@ public class MonsterAnimationController : AnimationController
     
     private static readonly List<string> WALK = new List<string>()
     {
-        "walk_up",
+        "walk_up_right",
         "walk_right",
-        "walk_down",
+        "walk_up_left",
         "walk_left"
     };
 
     private static readonly List<string> ATTACK = new List<string>()
     {
-        "attack_up",
+        "attack_up_right",
         "attack_right",
-        "attack_down",
+        "attack_up_left",
         "attack_left"
     };
     
     private static readonly List<string> HIT = new List<string>()
     {
-        "hit_up",
+        "hit_up_right",
         "hit_right",
-        "hit_down",
+        "hit_up_left",
         "hit_left"
     };
 

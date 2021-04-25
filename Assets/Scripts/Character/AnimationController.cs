@@ -9,6 +9,7 @@ public abstract class AnimationController : MonoBehaviour
 
     protected string currentAnimation;
     protected int currentDirection = 1;
+    protected int currentAttackDirection = 1;
 
 
     protected virtual void Start()
@@ -20,6 +21,7 @@ public abstract class AnimationController : MonoBehaviour
     protected void Update()
     {
         UpdateCurrentDirection();
+        UpdateAttacktDirection();
     }
     
     protected void UpdateCurrentDirection()
@@ -38,8 +40,15 @@ public abstract class AnimationController : MonoBehaviour
             }
         }
         else if (normalizedDirection.y < -0.75f)
-        {
-            currentDirection = 2;
+        { 
+            if (normalizedDirection.x >= 0)
+            {
+                currentDirection = 1;
+            }
+            else
+            {
+                currentDirection = 3;
+            }
         }
         else if (normalizedDirection.x > 0.75f)
         {
@@ -48,6 +57,28 @@ public abstract class AnimationController : MonoBehaviour
         else if (normalizedDirection.x < -0.75f)
         {
             currentDirection = 3;
+        }
+    }
+    
+    protected void UpdateAttacktDirection()
+    {
+        var normalizedDirection = characterController.Direction.normalized;
+        
+        if (normalizedDirection.y > 0.75f)
+        {
+            currentAttackDirection = 0;
+        }
+        else if (normalizedDirection.y < -0.75f)
+        { 
+            currentAttackDirection = 2;
+        }
+        else if (normalizedDirection.x > 0.75f)
+        {
+            currentAttackDirection = 1;
+        }
+        else if (normalizedDirection.x < -0.75f)
+        {
+            currentAttackDirection = 3;
         }
     }
     

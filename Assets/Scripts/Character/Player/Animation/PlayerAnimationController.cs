@@ -6,43 +6,43 @@ public class PlayerAnimationController : AnimationController
 {
     private static readonly List<string> IDLE = new List<string>()
     {
-        "Idle_up",
+        "Idle_up_right",
         "Idle_right",
-        "Idle_right",
+        "Idle_up_left",
         "Idle_left"
     };
 
     
     private static readonly List<string> WALK = new List<string>()
     {
-        "Walk_up",
+        "Walk_up_right",
         "Walk_right",
-        "Idle_right",
+        "Walk_up_left",
         "Walk_left"
     };
 
     private static readonly List<string> SLASH_ATTACK = new List<string>()
     {
-        "Slash_up",
+        "Slash_up_right",
         "Slash_right",
-        "Slash_down",
+        "Slash_up_left",
         "Slash_left"
     };
     
     private static readonly List<string> THRUST_ATTACK = new List<string>()
     {
-        "Thrust_up",
+        "Thrust_up_right",
         "Thrust_right",
-        "Thrust_down",
+        "Thrust_up_left",
         "Thrust_left"
     };
 
     
     private static readonly List<string> HIT = new List<string>()
     {
-        "Hit_up",
+        "Hit_up_right",
         "Hit_right",
-        "Hit_right",
+        "Hit_up_left",
         "Hit_left"
     };
 
@@ -83,14 +83,13 @@ public class PlayerAnimationController : AnimationController
         }
         else
         {
-            Debug.Log("character is attacking");
             switch (characterController.CurrentWeaponType)
             {
                 case WeaponType.Slash:
-                    ChangeAnimationState(SLASH_ATTACK[currentDirection]);
+                    ChangeAnimationState(SLASH_ATTACK[currentAttackDirection]);
                     break;
                 case WeaponType.Thrust:
-                    ChangeAnimationState(THRUST_ATTACK[currentDirection]);
+                    ChangeAnimationState(THRUST_ATTACK[currentAttackDirection]);
                     break;
                 default:
                     break;
