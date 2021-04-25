@@ -5,6 +5,11 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    [SerializeField] private WeaponType weaponType;
+
+    public WeaponType WeaponType => weaponType;
+
+
     [SerializeField] private int damage = 0;
     [SerializeField] private Transform hitZone;
     

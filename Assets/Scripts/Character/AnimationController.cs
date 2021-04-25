@@ -39,14 +39,7 @@ public abstract class AnimationController : MonoBehaviour
         }
         else if (normalizedDirection.y < -0.75f)
         {
-            if (normalizedDirection.x >= 0)
-            {
-                currentDirection = 1;
-            }
-            else
-            {
-                currentDirection = 3;
-            }
+            currentDirection = 2;
         }
         else if (normalizedDirection.x > 0.75f)
         {

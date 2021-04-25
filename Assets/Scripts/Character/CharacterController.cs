@@ -5,6 +5,10 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public abstract class CharacterController : MonoBehaviour
 {
+    private WeaponType currentWeaponType = WeaponType.Default;
+
+    public WeaponType CurrentWeaponType => currentWeaponType;
+
     public CharacterState characterState;
     
     protected Rigidbody2D rigidbody;
@@ -55,6 +59,7 @@ public abstract class CharacterController : MonoBehaviour
     protected virtual void Start()
     {
         health = maxHealth;
+        currentWeaponType = GetComponentInChildren<Weapon>().WeaponType;
     }
 
     protected void Awake()

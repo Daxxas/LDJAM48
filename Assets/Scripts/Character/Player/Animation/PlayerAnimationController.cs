@@ -8,7 +8,7 @@ public class PlayerAnimationController : AnimationController
     {
         "Idle_up",
         "Idle_right",
-        "Idle_down",
+        "Idle_right",
         "Idle_left"
     };
 
@@ -17,7 +17,7 @@ public class PlayerAnimationController : AnimationController
     {
         "Walk_up",
         "Walk_right",
-        "Walk_down",
+        "Idle_right",
         "Walk_left"
     };
 
@@ -28,13 +28,21 @@ public class PlayerAnimationController : AnimationController
         "Slash_down",
         "Slash_left"
     };
+    
+    private static readonly List<string> THRUST_ATTACK = new List<string>()
+    {
+        "Thrust_up",
+        "Thrust_right",
+        "Thrust_down",
+        "Thrust_left"
+    };
 
     
     private static readonly List<string> HIT = new List<string>()
     {
         "Hit_up",
         "Hit_right",
-        "Hit_down",
+        "Hit_right",
         "Hit_left"
     };
 
@@ -75,7 +83,18 @@ public class PlayerAnimationController : AnimationController
         }
         else
         {
-            ChangeAnimationState(SLASH_ATTACK[currentDirection]);
+            Debug.Log("character is attacking");
+            switch (characterController.CurrentWeaponType)
+            {
+                case WeaponType.Slash:
+                    ChangeAnimationState(SLASH_ATTACK[currentDirection]);
+                    break;
+                case WeaponType.Thrust:
+                    ChangeAnimationState(THRUST_ATTACK[currentDirection]);
+                    break;
+                default:
+                    break;
+            }
         }
     }
 

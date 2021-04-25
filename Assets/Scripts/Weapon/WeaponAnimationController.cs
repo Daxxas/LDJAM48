@@ -7,10 +7,10 @@ public class WeaponAnimationController : AnimationController
     private const string IDLE  = "idle";
     private static readonly List<string> ATTACK = new List<string>()
     {
-        "Slash_up",
-        "Slash_right",
-        "Slash_down",
-        "Slash_left"
+        "Attack_up",
+        "Attack_right",
+        "Attack_down",
+        "Attack_left"
     };
 
     protected override void Start()
