@@ -27,6 +27,7 @@ public class SimpleMonsterController : CharacterController
         
         if (IsDead)
         {
+            rigidbody.velocity = Vector2.zero;
             characterState = CharacterState.DEAD;
             return;
         }
