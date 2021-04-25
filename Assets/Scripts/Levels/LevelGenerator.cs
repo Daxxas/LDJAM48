@@ -27,11 +27,11 @@ public class LevelGenerator : MonoBehaviour
         LevelModule[] tops = Array.FindAll(levelsForBiome,
             level => level.GetComponent<LevelModule>().levelType == LevelType.Top);
 
-        foreach (GameObject bottomGameObject in bottoms[Random.Range(0, bottoms.Length)].GetLevelModuleData())
+        foreach (GameObject topGameObject in tops[Random.Range(0, tops.Length)].GetLevelModuleData())
         {
             Instantiate(
-                bottomGameObject,
-                new Vector2(0, 0) + (Vector2) bottomGameObject.transform.position,
+                topGameObject,
+                new Vector2(0, 0) + (Vector2) topGameObject.transform.position,
                 Quaternion.identity,
                 transform
             );
@@ -43,20 +43,18 @@ public class LevelGenerator : MonoBehaviour
             {
                 Instantiate(
                     middleGameObject,
-                    new Vector2(0, 16 * i) + (Vector2) middleGameObject.transform.position,
+                    new Vector2(0, -16 * i) + (Vector2) middleGameObject.transform.position,
                     Quaternion.identity,
                     transform
                 );
             }
         }
-
         
-        
-        foreach (GameObject topGameObject in tops[Random.Range(0, tops.Length)].GetLevelModuleData())
+        foreach (GameObject bottomGameObject in bottoms[Random.Range(0, bottoms.Length)].GetLevelModuleData())
         {
             Instantiate(
-                topGameObject,
-                new Vector2(0, 16 * (size + 1)) + (Vector2) topGameObject.transform.position,
+                bottomGameObject,
+                new Vector2(0, -16 * (size + 1)) + (Vector2) bottomGameObject.transform.position,
                 Quaternion.identity,
                 transform
             );
