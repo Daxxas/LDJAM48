@@ -105,13 +105,13 @@ public abstract class CharacterController : MonoBehaviour
         if (!isAttacking)
         {
             isAttacking = true;
+            onAttack?.Invoke();
             Invoke(nameof(EndAttack), AttackSpeed);
         }
     }
 
     private void EndAttack()
     {
-        onAttack?.Invoke();
         isAttacking = false;
     }
 

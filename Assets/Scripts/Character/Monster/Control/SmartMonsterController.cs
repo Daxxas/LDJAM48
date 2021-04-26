@@ -38,7 +38,6 @@ public class SmartMonsterController : CharacterController
         base.Update();
         
         direction = (target.position - transform.position).normalized;
-
         
         if (IsDead)
         {
@@ -50,7 +49,7 @@ public class SmartMonsterController : CharacterController
             }
             
             rigidbody.velocity = Vector2.zero;
-            rigidbody.isKinematic = true;
+            GetComponent<Collider2D>().enabled = false;
             characterState = CharacterState.DEAD;
             return;
         }

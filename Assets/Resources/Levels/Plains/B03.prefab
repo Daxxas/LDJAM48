@@ -5885,6 +5885,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 77943e62314fecf4da05e607a997e4cb, type: 2}
     - target: {fileID: 4475337552077983979, guid: 8ef9345fdddf5174898fc49239a22e3f, type: 3}
+      propertyPath: spawnBossLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4475337552077983979, guid: 8ef9345fdddf5174898fc49239a22e3f, type: 3}
       propertyPath: enemyTypes.Array.size
       value: 2
       objectReference: {fileID: 0}
