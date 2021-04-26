@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
@@ -12,9 +13,16 @@ public class CinemachineTargetFinder : MonoBehaviour
         TrySetFollow();
     }
 
+    private CinemachineVirtualCamera vcam;
+
     public void TrySetFollow()
     {
-        GetComponent<CinemachineVirtualCamera>().Follow = FindObjectOfType<PlayerController>().transform;
-        transform.position = FindObjectOfType<PlayerController>().transform.position;
+        vcam = GetComponent<CinemachineVirtualCamera>();
+        vcam.Follow = FindObjectOfType<PlayerController>().transform;
+    }
+
+    private void Update()
+    {
+        vcam.ForceCameraPosition(new Vector3(0, transform.position.y, transform.position.z), Quaternion.identity);
     }
 } 
