@@ -56,7 +56,10 @@ public class Weapon : MonoBehaviour
 
             // hitZone.transform.rotation = Quaternion.RotateTowards(transform.rotation, new Quaternion(0, 0, angle, 0), 1);
 
-            hitZone.transform.eulerAngles = new Vector3(0, 0, angle);
+            if (hitZone != null)
+            {
+                hitZone.transform.eulerAngles = new Vector3(0, 0, angle);
+            }
         }
     }
     public void Attack(LayerMask whatIsEnemy)

@@ -26,7 +26,7 @@ public class WeaponAnimationController : AnimationController
         {
             if (clip.name == ATTACK[0])
             {
-                characterController.UpdateAttackSpeed(clip.length);
+                characterController.UpdateWeapon(clip.length, GetComponent<Weapon>().WeaponType);
             }
         }
         

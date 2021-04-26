@@ -170,10 +170,11 @@ public abstract class CharacterController : MonoBehaviour
         health = Mathf.Clamp(health + healAmount, 0, maxHealth);
     }
 
-    public void UpdateAttackSpeed(float newAttackSpeed)
+    public void UpdateWeapon(float newAttackSpeed, WeaponType newWeaponType)
     {
         Debug.Log("new attack speed = " + newAttackSpeed);
         attackSpeed = newAttackSpeed;
+        currentWeaponType = newWeaponType;
     }
 
     public void TestAnimEvent()
