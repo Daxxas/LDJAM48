@@ -136,7 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterState: 0
   moveSpeed: 7
-  knockbackResistance: 0
+  knockbackResistance: 1
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 128

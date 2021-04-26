@@ -136,7 +136,6 @@ public abstract class CharacterController : MonoBehaviour
             if (health <= 0)
             {
                 onDeath?.Invoke();
-                rigidbody.isKinematic = true;
                 isDead = true;
                 health = 0;
                 return;
