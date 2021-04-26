@@ -63,7 +63,11 @@ public class PlayerController : CharacterController
         {
             if (!IsAttacking)
             {
-                GetComponentInChildren<Weapon>().Attack(whatIsEnemy);
+                var weapon = GetComponentInChildren<Weapon>();
+                if (weapon != null)
+                {
+                    weapon.Attack(whatIsEnemy);
+                }
             }
 
             RaiseAttackEvent();
@@ -72,9 +76,11 @@ public class PlayerController : CharacterController
 
     private void Interact()
     {
+        Debug.Log("interact called");
         Collider2D[] interactables = Physics2D.OverlapCircleAll(transform.position, 1F, interactableLayerMask.value);
         if (interactables.Length > 0)
         {
+            Debug.Log("interact found");
             Collider2D closest = interactables[0];
             float closestDistance = float.MaxValue;
             

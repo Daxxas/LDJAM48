@@ -105,7 +105,7 @@ public abstract class AnimationController : MonoBehaviour
     
     private IEnumerator FlashColor(Color color, float duration, float frequence)
     {
-        Debug.Log("FlashColor ?");
+        Debug.Log("FlashColor called with parameters : " + duration + " " + frequence);
         var spriteRenderer = GetComponent<SpriteRenderer>();
         var initColor = spriteRenderer.color;
 
@@ -114,6 +114,7 @@ public abstract class AnimationController : MonoBehaviour
 
         while (timePassed < duration)
         {
+            Debug.Log("while iteration");
             spriteRenderer.color = isNewColor? initColor : color;
             isNewColor = !isNewColor;
             yield return new WaitForSeconds(frequence);

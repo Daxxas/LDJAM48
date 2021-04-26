@@ -59,6 +59,9 @@ public class PlayerAnimationController : AnimationController
     private void Start()
     {
         base.Start();
+
+        characterController.onHit += () => StartFlashing(characterController.HitColor, characterController.HitDuration,
+            characterController.HitBlinkFrequence);
     }
 
     
@@ -71,13 +74,7 @@ public class PlayerAnimationController : AnimationController
             ChangeAnimationState(DEATH);
             return;
         }
-        
-        if (characterController.IsHitten)
-        {
-            StartFlashing(characterController.HitColor, characterController.HitDuration, characterController.HitBlinkFrequence);
-            return;
-        }
-        
+
         if (!characterController.IsAttacking)
         {
             if (characterController.CurrentSpeed < 0.1f)

@@ -10,11 +10,18 @@ public class SmartMonsterController : CharacterController
     
 
     [SerializeField] private float eyeReach = 10f;
-    [SerializeField] private float attackDashForce = 0f; 
+    [SerializeField] private float attackDashForce = 0f;
 
+    private bool sawTargetOnce = false;
+    
     void Start() {
         base.Start();
 
+        if (rigidbody.mass == 0)
+        {
+            rigidbody.mass = 1000;
+        }
+        
         agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         agent.updateUpAxis = false;
@@ -29,6 +36,8 @@ public class SmartMonsterController : CharacterController
     void Update()
     {
         base.Update();
+
+        direction = (target.position - transform.position).normalized;
 
         
         if (IsDead)
@@ -45,23 +54,19 @@ public class SmartMonsterController : CharacterController
             characterState = CharacterState.DEAD;
             return;
         }
-        
-        if (IsHitten)
-        {
-            characterState = CharacterState.HIT;
-        }
 
         if (target == null)
             return;
         
+        if (IsAttacking)
+            return;
         
-        direction = (target.position - transform.position).normalized;
         
         if (Vector2.Distance(transform.position, target.position) >= agent.stoppingDistance)
         {
-            if (Vector2.Distance(transform.position, target.position) < eyeReach)
+            if (Vector2.Distance(transform.position, target.position) < eyeReach || sawTargetOnce)
             {
-
+                sawTargetOnce = true;
                 characterState = CharacterState.WALK;
 
                 if (agent.enabled)
@@ -117,6 +122,6 @@ public class SmartMonsterController : CharacterController
     private void Charge()
     {
         Vector2 toTarget = (target.position - transform.position).normalized;
-        AddImpact(toTarget, attackDashForce);
+        AddImpact(toTarget, attackDashForce, true);
     }
 }

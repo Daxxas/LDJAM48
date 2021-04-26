@@ -14,14 +14,15 @@ public abstract class CharacterController : MonoBehaviour
     protected Rigidbody2D rigidbody;
     
     [SerializeField] protected float moveSpeed = 1f;
+    [SerializeField] [Range(0f, 1f)] private float knockbackResistance = 0f;
+    public LayerMask whatIsEnemy;
 
     [SerializeField] public AnimationClip attackClip;
+    [Header("Hit")]
     [SerializeField] private float invincibleDurationAfterHit = 0f;
-    [SerializeField] [Range(0f, 1f)] private float knockbackResistance = 0f;
     [SerializeField] private float hitDuration = 0f;
     [SerializeField] private float hitBlinkFrequence = 0.1f;
     [SerializeField] private Color hitColor;
-    public LayerMask whatIsEnemy;
     private int health;
 
     public Color HitColor => hitColor;
@@ -30,6 +31,8 @@ public abstract class CharacterController : MonoBehaviour
     public int Health => health;
     
     [SerializeField] private int maxHealth = 1;
+
+    public int MaxHealth => maxHealth;
     
     public float AttackSpeed => attackClip.length;
     
@@ -115,6 +118,7 @@ public abstract class CharacterController : MonoBehaviour
         {
             Debug.Log("Hit " + gameObject.name + " !");
             health -= damage;
+            onHit?.Invoke();
 
             if (health <= 0)
             {
@@ -129,7 +133,6 @@ public abstract class CharacterController : MonoBehaviour
             isHitten = true;
             var knockbackDirection = (Vector2) transform.position - source;
             AddImpact(knockbackDirection, knockbackForce);
-            onHit?.Invoke();
             Invoke(nameof(EndHit), hitDuration);
         }
     }
@@ -146,9 +149,16 @@ public abstract class CharacterController : MonoBehaviour
         isInvincible = false;
     }
 
-    public void AddImpact(Vector2 impactDirection, float force)
+    public void AddImpact(Vector2 impactDirection, float force, bool ignoreResistance = false)
     {
-        momentum += impactDirection.normalized * (force * (1-knockbackResistance));
+        if (ignoreResistance)
+        {
+            momentum += impactDirection.normalized * (force);
+        }
+        else
+        {
+            momentum += impactDirection.normalized * (force * (1-knockbackResistance));
+        }
     }
     
     public void Heal(int healAmount)

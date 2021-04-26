@@ -248,15 +248,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterState: 0
   moveSpeed: 1
-  attackClip: {fileID: 7400000, guid: 9ad830d515c627147ac263b001296d35, type: 2}
-  invincibleDurationAfterHit: 0
   knockbackResistance: 0
-  hitDuration: 1
-  hitBlinkFrequence: 0.15
-  hitColor: {r: 1, g: 0, b: 0, a: 1}
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 256
+  attackClip: {fileID: 7400000, guid: 9ad830d515c627147ac263b001296d35, type: 2}
+  invincibleDurationAfterHit: 0
+  hitDuration: 0.6
+  hitBlinkFrequence: 0.1
+  hitColor: {r: 1, g: 0, b: 0, a: 1}
   maxHealth: 3
   momentumCoef: 5
   eyeReach: 10

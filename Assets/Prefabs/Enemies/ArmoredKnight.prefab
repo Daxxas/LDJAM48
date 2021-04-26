@@ -30,7 +30,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6657849826686040334}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.19, y: 0.95, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -101,7 +101,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1000
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -177,11 +177,11 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.75
-  m_Speed: 2
+  m_Speed: 2.3
   m_Acceleration: 60
   avoidancePriority: 50
   m_AngularSpeed: 200
-  m_StoppingDistance: 1.5
+  m_StoppingDistance: 2.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -203,19 +203,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterState: 0
   moveSpeed: 1
-  attackClip: {fileID: 7400000, guid: f4065d3c42cd54c4f8601090c129aea6, type: 2}
-  invincibleDurationAfterHit: 0
-  knockbackResistance: 0
-  hitDuration: 1
-  hitBlinkFrequence: 0.15
-  hitColor: {r: 1, g: 0, b: 0, a: 1}
+  knockbackResistance: 0.9
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 256
+  attackClip: {fileID: 7400000, guid: f4065d3c42cd54c4f8601090c129aea6, type: 2}
+  invincibleDurationAfterHit: 0
+  hitDuration: 0.6
+  hitBlinkFrequence: 0.1
+  hitColor: {r: 1, g: 0, b: 0, a: 1}
   maxHealth: 5
   momentumCoef: 5
   eyeReach: 20
-  attackDashForce: 0
+  attackDashForce: 6
 --- !u!1 &6831743609064733627
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,5 +291,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.1, y: 1.5}
   m_EdgeRadius: 0

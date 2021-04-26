@@ -15,11 +15,12 @@ public class LevelGenerator : MonoBehaviour
     private void Start()
     {
         levels = Resources.LoadAll<LevelModule>("Levels");
-        GenerateLevel(LevelBiome.Plains, 10);
     }
 
-    private void GenerateLevel(LevelBiome levelBiome, int size)
+    public void GenerateLevel(LevelBiome levelBiome, int size)
     {
+        Debug.Log("generate level called with size " + size);
+        
         LevelModule[] levelsForBiome =
             Array.FindAll(levels, level => level.GetComponent<LevelModule>().levelBiome == levelBiome);
 

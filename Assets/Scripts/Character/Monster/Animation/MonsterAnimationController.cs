@@ -43,27 +43,28 @@ public class MonsterAnimationController : AnimationController
     void Update()
     {
         base.Update();
+
+
         
         switch (characterController.characterState)
         {
+            case CharacterState.DEAD:
+                ChangeAnimationState(DEATH);
+                break;
+            case CharacterState.ATTACK:
+                ChangeAnimationState(ATTACK[currentDirection]);
+                break;
             case CharacterState.IDLE:
                 ChangeAnimationState(IDLE);
                 break;
             case CharacterState.WALK:
                 ChangeAnimationState(WALK[currentDirection]);
                 break;
-            case CharacterState.ATTACK:
-                ChangeAnimationState(ATTACK[currentDirection]);
-                break;
-            case CharacterState.HIT:
-                break;
-            case CharacterState.DEAD:
-                ChangeAnimationState(DEATH);
-                break;
             default:
                 ChangeAnimationState(IDLE);
                 break;
         }
+            
         
     }
 }
