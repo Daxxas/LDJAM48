@@ -7,11 +7,13 @@ public class MainLoader
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
     public static void LoadMain()
     {
-        GameObject main = GameObject.Instantiate(Resources.Load("Main/LevelManager")) as GameObject;
-        GameObject.DontDestroyOnLoad(main);
-        
-        GameObject player = GameObject.Instantiate(Resources.Load("Main/Player")) as GameObject;
-        GameObject.DontDestroyOnLoad(player);
+        GameObject[] ddolObj = Resources.LoadAll<GameObject>("Main");
 
+        foreach (var gameObject in ddolObj)
+        {
+            var obj = GameObject.Instantiate(gameObject);
+            GameObject.DontDestroyOnLoad(obj);
+        }
+        
     }
 }

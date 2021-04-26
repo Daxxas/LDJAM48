@@ -30,6 +30,8 @@ public class HeartBar : MonoBehaviour
             hearts.Add(newHeart);
             hearts[i].sprite = fullHeart;
         }
+
+        UpdateHealthBar();
     }
     
     private void UpdateHealthBar()
