@@ -170,6 +170,21 @@ public abstract class CharacterController : MonoBehaviour
     {
         attackClip = newClip;
     }
+
+    public void TestAnimEvent()
+    {
+        Debug.Log("anim event");
+    }
+    
+    public void Attack()
+    {
+        var weapon = GetComponentInChildren<Weapon>();
+
+        if (weapon != null)
+        {
+            weapon.Attack(whatIsEnemy);
+        }
+    }
     
     void OnDrawGizmos()
     {

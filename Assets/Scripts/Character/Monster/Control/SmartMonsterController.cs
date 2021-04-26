@@ -101,11 +101,6 @@ public class SmartMonsterController : CharacterController
             }
         }
     }
-    
-    private void Attack()
-    {
-        GetComponentInChildren<Weapon>().Attack(whatIsEnemy);
-    }
 
     public override void Hit(Vector2 source, int damage, float knockbackForce)
     {

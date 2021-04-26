@@ -22,7 +22,7 @@ public class PlayerController : CharacterController
         inputManager.playerInputs.Gameplay.Movement.canceled +=
             context => inputDirection = context.ReadValue<Vector2>();
 
-        inputManager.playerInputs.Gameplay.Attack.performed += context => Attack();
+        inputManager.playerInputs.Gameplay.Attack.performed += context => PlayerAttack();
 
         inputManager.playerInputs.Gameplay.Interact.performed += context => Interact();
     }
@@ -57,19 +57,10 @@ public class PlayerController : CharacterController
         }
     }
 
-    private void Attack()
+    private void PlayerAttack()
     {
         if (!IsDead && !IsHitten)
         {
-            if (!IsAttacking)
-            {
-                var weapon = GetComponentInChildren<Weapon>();
-                if (weapon != null)
-                {
-                    weapon.Attack(whatIsEnemy);
-                }
-            }
-
             RaiseAttackEvent();
         }
     }

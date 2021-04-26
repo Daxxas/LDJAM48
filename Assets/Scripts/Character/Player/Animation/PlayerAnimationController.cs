@@ -25,7 +25,7 @@ public class PlayerAnimationController : AnimationController
     {
         "Slash_up_right",
         "Slash_right",
-        "Slash_rightp",
+        "Slash_right",
         "Slash_left"
     };
     
@@ -43,6 +43,14 @@ public class PlayerAnimationController : AnimationController
         "shoot_right",
         "shoot_down",
         "shoot_left"
+    };
+    
+    private static readonly List<string> TWOHAND_ATTACK = new List<string>()
+    {
+        "twohand_up",
+        "twohand_right",
+        "twohand_right",
+        "twohand_left"
     };
 
     
@@ -93,11 +101,15 @@ public class PlayerAnimationController : AnimationController
                 case WeaponType.Slash:
                     ChangeAnimationState(SLASH_ATTACK[currentAttackDirection]);
                     break;
+                case WeaponType.Swing:
                 case WeaponType.Thrust:
                     ChangeAnimationState(THRUST_ATTACK[currentAttackDirection]);
                     break;
                 case WeaponType.Shot:
                     ChangeAnimationState(SHOT_ATTACK[currentAttackDirection]);
+                    break;
+                case WeaponType.Twohand:
+                    ChangeAnimationState(TWOHAND_ATTACK[currentAttackDirection]);
                     break;
                 default:
                     break;
