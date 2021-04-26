@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0f50303db6a3f4b99c9e1d808c3aac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponPrefab: {fileID: 0}
+  weaponPrefab: {fileID: 2689539861781523975}
   weaponType: 3
   droppedSprite: {fileID: -6765633287753241754, guid: 6f96f770769a27c4ca608879b59d62db, type: 3}
   damage: 1

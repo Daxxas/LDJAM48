@@ -5,11 +5,14 @@ using UnityEngine;
 public class DroppedWeapon : MonoBehaviour, Interactable
 {
     private SpriteRenderer spriteRenderer;
+    private AudioSource audioSource;
+    private AudioClip pickupSound;
 
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         SetSprite();
+        LoadSounds();
     }
 
     public void Interact(CharacterController characterController)
@@ -17,6 +20,8 @@ public class DroppedWeapon : MonoBehaviour, Interactable
         GameObject characterWeapon = GetCharacterCurrentWeapon(characterController);
         PutDroppedWeaponOnPlayer(characterController);
         DropPlayerWeapon(characterWeapon);
+        
+        audioSource.PlayOneShot(pickupSound);
     }
 
     private void PutDroppedWeaponOnPlayer(CharacterController characterController)
@@ -65,5 +70,11 @@ public class DroppedWeapon : MonoBehaviour, Interactable
     private void SetSprite(GameObject weapon)
     {
         spriteRenderer.sprite = weapon.GetComponent<Weapon>().DroppedSprite;
+    }
+
+    private void LoadSounds()
+    {
+        audioSource = FindObjectOfType<AudioSource>();
+        pickupSound = Resources.Load<AudioClip>("Audio/PickupWeapon");
     }
 }

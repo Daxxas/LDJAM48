@@ -11,6 +11,9 @@ public class Weapon : MonoBehaviour
     [SerializeField] private Sprite droppedSprite;
     public Sprite DroppedSprite => droppedSprite;
 
+    private AudioClip attackSound;
+    private AudioSource audioSource;
+
     
     [SerializeField] private int damage = 0;
     [SerializeField] private float turnSpeed = 0f; 
@@ -30,6 +33,8 @@ public class Weapon : MonoBehaviour
     {
         characterController = GetComponentInParent<CharacterController>();
         characterController.onAttack += UpdateRotation;
+        
+        LoadSounds();
     }
 
     void Update()
@@ -80,8 +85,7 @@ public class Weapon : MonoBehaviour
             enemy.GetComponent<CharacterController>()?.Hit(transform.position, damage, knockback);
         }
         
-
-
+        audioSource.PlayOneShot(attackSound);
     }
 
     public void Shoot()
@@ -95,5 +99,11 @@ public class Weapon : MonoBehaviour
             projectileComp.knockback = knockback;
             projectileComp.whatIsEnemy = characterController.whatIsEnemy;
         }
+    }
+
+    private void LoadSounds()
+    {
+        audioSource = FindObjectOfType<AudioSource>();
+        attackSound = Resources.Load<AudioClip>("Audio/" + weaponType);
     }
 }

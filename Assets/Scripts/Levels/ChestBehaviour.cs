@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -9,6 +10,13 @@ public class ChestBehaviour : MonoBehaviour, Interactable
     [SerializeField] private GameObject droppedWeaponPrefab;
 
     private bool isOpened;
+    private AudioSource audioSource;
+    private AudioClip openChestSound;
+
+    private void Start()
+    {
+        LoadSounds();
+    }
 
     public void Interact(CharacterController characterController)
     {
@@ -26,6 +34,7 @@ public class ChestBehaviour : MonoBehaviour, Interactable
                 isOpened = true;
                 gameObject.layer = LayerMask.NameToLayer("Default");
                 GetComponent<SpriteRenderer>().sprite = openSprite;
+                audioSource.PlayOneShot(openChestSound, .5F);
 
                 DropLoot(loot);
                 break;
@@ -56,5 +65,11 @@ public class ChestBehaviour : MonoBehaviour, Interactable
                 droppedWeapon.transform
             ).SetActive(false);
         }
+    }
+
+    private void LoadSounds()
+    {
+        audioSource = FindObjectOfType<AudioSource>();
+        openChestSound = Resources.Load<AudioClip>("Audio/OpenChest");
     }
 }

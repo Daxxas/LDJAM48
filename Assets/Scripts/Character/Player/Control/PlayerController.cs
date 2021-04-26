@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Linq;
 using UnityEngine;
 
@@ -5,26 +6,26 @@ using UnityEngine;
 public class PlayerController : CharacterController
 {
     [SerializeField] private LayerMask interactableLayerMask;
+    private AudioSource audioSource;
 
     private InputManager inputManager;
     private Vector2 inputDirection;
     private CharacterController characterController;
+    
+    private AudioClip runSound;
+    private AudioClip hitSound;
+    private AudioClip dieSound;
+    private float runningSoundCooldown = .3F;
+    private float nextRunningSound;
 
     void Start()
     {
         base.Start();
         
         characterController = GetComponent<CharacterController>();
-        inputManager = GetComponent<InputManager>();
 
-        inputManager.playerInputs.Gameplay.Movement.performed +=
-            context => inputDirection = context.ReadValue<Vector2>();
-        inputManager.playerInputs.Gameplay.Movement.canceled +=
-            context => inputDirection = context.ReadValue<Vector2>();
-
-        inputManager.playerInputs.Gameplay.Attack.performed += context => PlayerAttack();
-
-        inputManager.playerInputs.Gameplay.Interact.performed += context => Interact();
+        InitializeInputs();
+        LoadSounds();
     }
 
     private void Update()
@@ -67,12 +68,11 @@ public class PlayerController : CharacterController
             if (direction.magnitude > 0.1f)
             {
                 isWalking = true;
+                PlayRunningSound();
                 return direction * moveSpeed;
             }
-            else
-            {
-                isWalking = false;
-            }
+
+            isWalking = false;
         }
         return Vector2.zero;
     }
@@ -106,6 +106,49 @@ public class PlayerController : CharacterController
             }
 
             closest.GetComponent<Interactable>().Interact(characterController);
+        }
+    }
+
+    public override void Hit(Vector2 source, int damage, float knockbackForce)
+    {
+        base.Hit(source, damage, knockbackForce);
+        
+        audioSource.PlayOneShot(hitSound);
+        if (Health <= 0 && !IsDead)
+        {
+            audioSource.PlayOneShot(dieSound);
+        }
+    }
+
+    private void LoadSounds()
+    {
+        audioSource = FindObjectOfType<AudioSource>();
+        runSound = Resources.Load<AudioClip>("Audio/Run");
+        hitSound = Resources.Load<AudioClip>("Audio/PlayerHit");
+        dieSound = Resources.Load<AudioClip>("Audio/Die");
+    }
+
+    private void InitializeInputs()
+    {
+        inputManager = GetComponent<InputManager>();
+
+        inputManager.playerInputs.Gameplay.Movement.performed +=
+            context => inputDirection = context.ReadValue<Vector2>();
+        inputManager.playerInputs.Gameplay.Movement.canceled +=
+            context => inputDirection = context.ReadValue<Vector2>();
+
+        inputManager.playerInputs.Gameplay.Attack.performed += context => PlayerAttack();
+
+        inputManager.playerInputs.Gameplay.Interact.performed += context => Interact();
+    }
+
+    private void PlayRunningSound()
+    {
+        float time = Time.time;
+        if (time > nextRunningSound)
+        {
+            nextRunningSound = time + runningSoundCooldown;
+            audioSource.PlayOneShot(runSound, .05F);
         }
     }
 }

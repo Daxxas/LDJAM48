@@ -12,6 +12,9 @@ public class LevelGenerator : MonoBehaviour
     private LevelModule[] levels;
     private List<LevelModule> generatedBonusRooms = new List<LevelModule>();
 
+    private AudioSource audioSource;
+    private AudioClip startRunSound;
+
     private void Awake()
     {
         levels = Resources.LoadAll<LevelModule>("Levels");
@@ -19,10 +22,11 @@ public class LevelGenerator : MonoBehaviour
 
     private void Start()
     {
-        
         var levelManager = FindObjectOfType<LevelManager>();
         GenerateLevel(levelManager.levelBiomeOrder[levelManager.currentBiomeIndex],
             levelManager.levelBiomeSize[levelManager.currentBiomeIndex]);
+
+        LoadSounds();
     }
     
     public void GenerateLevel(LevelBiome levelBiome, int size)
@@ -127,5 +131,14 @@ public class LevelGenerator : MonoBehaviour
         }
 
         return false;
+    }
+
+    private void LoadSounds()
+    {
+        audioSource = FindObjectOfType<AudioSource>();
+        startRunSound = Resources.Load<AudioClip>("Audio/StartRun");
+        
+        if (LevelManager.Instance.currentBiomeIndex == 0)
+            audioSource.PlayOneShot(startRunSound, .5F);
     }
 }
