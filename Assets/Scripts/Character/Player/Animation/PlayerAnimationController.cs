@@ -85,7 +85,7 @@ public class PlayerAnimationController : AnimationController
 
         if (!characterController.IsAttacking)
         {
-            if (characterController.CurrentSpeed < 0.1f)
+            if (!characterController.IsWalking)
             {
                 ChangeAnimationState(IDLE[currentDirection]);
             }

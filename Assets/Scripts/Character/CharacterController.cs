@@ -38,6 +38,10 @@ public abstract class CharacterController : MonoBehaviour
     
     protected Vector2 direction;
     public Vector2 Direction => direction;
+
+    protected bool isWalking = false;
+
+    public bool IsWalking => isWalking;
     
     public float CurrentSpeed => rigidbody.velocity.magnitude;
     

@@ -36,7 +36,7 @@ public class SmartMonsterController : CharacterController
     void Update()
     {
         base.Update();
-
+        
         direction = (target.position - transform.position).normalized;
 
         
@@ -67,8 +67,8 @@ public class SmartMonsterController : CharacterController
             if (Vector2.Distance(transform.position, target.position) < eyeReach || sawTargetOnce)
             {
                 sawTargetOnce = true;
-                characterState = CharacterState.WALK;
 
+                characterState = CharacterState.WALK;
                 if (agent.enabled)
                 {
                     agent.isStopped = false;

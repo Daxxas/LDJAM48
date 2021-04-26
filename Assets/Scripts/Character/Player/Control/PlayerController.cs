@@ -30,7 +30,7 @@ public class PlayerController : CharacterController
     private void Update()
     {
         base.Update();
-
+        
         if (IsDead || IsAttacking)
         {
             rigidbody.velocity = Vector2.zero;
@@ -49,10 +49,13 @@ public class PlayerController : CharacterController
             if (direction.magnitude > 0.1f)
             {
                 rigidbody.velocity = direction * moveSpeed;
+                isWalking = true;
             }
             else
             {
                 rigidbody.velocity = Vector2.zero;
+                isWalking = false;
+
             }
         }
     }
