@@ -172,6 +172,7 @@ public abstract class CharacterController : MonoBehaviour
 
     public void UpdateAttackSpeed(float newAttackSpeed)
     {
+        Debug.Log("new attack speed = " + newAttackSpeed);
         attackSpeed = newAttackSpeed;
     }
 
