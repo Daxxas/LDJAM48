@@ -17,7 +17,7 @@ public abstract class CharacterController : MonoBehaviour
     [SerializeField] [Range(0f, 1f)] private float knockbackResistance = 0f;
     public LayerMask whatIsEnemy;
 
-    [SerializeField] public AnimationClip attackClip;
+    private float attackSpeed = 0f;
     [Header("Hit")]
     [SerializeField] private float invincibleDurationAfterHit = 0f;
     [SerializeField] private float hitDuration = 0f;
@@ -34,7 +34,7 @@ public abstract class CharacterController : MonoBehaviour
 
     public int MaxHealth => maxHealth;
     
-    public float AttackSpeed => attackClip.length;
+    public float AttackSpeed => attackSpeed;
     
     protected Vector2 direction;
     public Vector2 Direction => direction;
@@ -170,9 +170,9 @@ public abstract class CharacterController : MonoBehaviour
         health = Mathf.Clamp(health + healAmount, 0, maxHealth);
     }
 
-    public void UpdateAttackAnimationClip(AnimationClip newClip)
+    public void UpdateAttackSpeed(float newAttackSpeed)
     {
-        attackClip = newClip;
+        attackSpeed = newAttackSpeed;
     }
 
     public void TestAnimEvent()

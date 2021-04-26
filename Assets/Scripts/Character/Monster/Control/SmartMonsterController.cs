@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -93,10 +94,20 @@ public class SmartMonsterController : CharacterController
                 agent.isStopped = true;
             }
             
+            
+            
+            
             if (!IsAttacking && targetController.Health > 0)
             {
+                if (CurrentWeaponType == WeaponType.Shot)
+                {
+                    characterState = CharacterState.SHOOT;
+                }
+                else
+                {
+                    characterState = CharacterState.ATTACK;
+                }
                 RaiseAttackEvent();
-                characterState = CharacterState.ATTACK;
             }
         }
     }
@@ -118,4 +129,5 @@ public class SmartMonsterController : CharacterController
         Vector2 toTarget = (target.position - transform.position).normalized;
         AddImpact(toTarget, attackDashForce, true);
     }
+
 }

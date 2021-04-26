@@ -19,17 +19,8 @@ public class WeaponAnimationController : AnimationController
     {
         animator = GetComponentInParent<Animator>();
         characterController = GetComponentInParent<CharacterController>();
-
-        foreach (var clip in animator.runtimeAnimatorController.animationClips)
-        {
-            if (clip.name == ATTACK[0])
-            {
-                 characterController.UpdateAttackAnimationClip(clip);
-                 return;
-            }
-        }
         
-        Debug.Log("Attention : l'arme n'a pas été mise à jour");
+        characterController.UpdateAttackSpeed(ATTACK[0].Length);
     }
 
     private void Update()

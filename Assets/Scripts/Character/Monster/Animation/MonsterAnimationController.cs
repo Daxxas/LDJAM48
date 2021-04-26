@@ -22,6 +22,14 @@ public class MonsterAnimationController : AnimationController
         "attack_left"
     };
     
+    private static readonly List<string> SHOOT = new List<string>()
+    {
+        "shoot_up",
+        "shoot_right",
+        "shoot_down",
+        "shoot_left"
+    };
+    
     private static readonly List<string> HIT = new List<string>()
     {
         "hit_up_right",
@@ -53,6 +61,9 @@ public class MonsterAnimationController : AnimationController
                 break;
             case CharacterState.ATTACK:
                 ChangeAnimationState(ATTACK[currentDirection]);
+                break;
+            case CharacterState.SHOOT:
+                ChangeAnimationState(SHOOT[currentAttackDirection]);
                 break;
             case CharacterState.IDLE:
                 ChangeAnimationState(IDLE);
