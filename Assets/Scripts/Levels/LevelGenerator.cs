@@ -57,7 +57,7 @@ public class LevelGenerator : MonoBehaviour
     {
         for (int i = 1; i <= size; i++)
         {
-            if (Random.value > .9)
+            if (Random.value > .8)
             {
                 bool hasBonusRoomBeenGenerated = GenerateBonusRoom(bonuses, i);
                 if (hasBonusRoomBeenGenerated)
