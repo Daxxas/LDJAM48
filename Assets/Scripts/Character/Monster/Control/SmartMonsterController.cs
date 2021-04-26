@@ -57,11 +57,14 @@ public class SmartMonsterController : CharacterController
 
         if (target == null)
             return;
-        
+
         if (IsAttacking)
+        {
+            Debug.Log("return because attacking !");
             return;
+        }
         
-        
+
         if (Vector2.Distance(transform.position, target.position) >= agent.stoppingDistance)
         {
             if (Vector2.Distance(transform.position, target.position) < eyeReach || sawTargetOnce)

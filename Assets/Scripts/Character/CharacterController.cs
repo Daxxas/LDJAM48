@@ -17,7 +17,7 @@ public abstract class CharacterController : MonoBehaviour
     [SerializeField] [Range(0f, 1f)] private float knockbackResistance = 0f;
     public LayerMask whatIsEnemy;
 
-    private float attackSpeed = 0f;
+    [SerializeField] private float attackSpeed = 0f;
     [Header("Hit")]
     [SerializeField] private float invincibleDurationAfterHit = 0f;
     [SerializeField] private float hitDuration = 0f;
@@ -64,7 +64,12 @@ public abstract class CharacterController : MonoBehaviour
     public event OnDeath onDeath;
 
     private bool isDead = false;
-    public bool IsDead => isDead;
+    public bool IsDead
+    {
+        get => isDead;
+        set => isDead = value;
+    }
+
     private bool isInvincible = false;
     
     protected Vector2 momentum = Vector2.zero;
@@ -104,6 +109,7 @@ public abstract class CharacterController : MonoBehaviour
     {
         if (!isAttacking)
         {
+            Debug.Log("attack event");
             isAttacking = true;
             onAttack?.Invoke();
             Invoke(nameof(EndAttack), AttackSpeed);

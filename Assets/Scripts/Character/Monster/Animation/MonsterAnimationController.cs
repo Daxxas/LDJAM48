@@ -45,7 +45,14 @@ public class MonsterAnimationController : AnimationController
         base.Start();
         
         characterController.onHit += () => StartFlashing(characterController.HitColor, characterController.HitDuration, characterController.HitBlinkFrequence);
-
+        
+        foreach (var clip in animator.runtimeAnimatorController.animationClips)
+        {
+            if (clip.name == ATTACK[1])
+            {
+                characterController.UpdateWeapon(clip.length, GetComponentInChildren<Weapon>().WeaponType);
+            }
+        }
     }
     
     void Update()

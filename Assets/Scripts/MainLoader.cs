@@ -10,6 +10,8 @@ public class MainLoader
         GameObject main = GameObject.Instantiate(Resources.Load("Main/LevelManager")) as GameObject;
         GameObject.DontDestroyOnLoad(main);
         
+        GameObject player = GameObject.Instantiate(Resources.Load("Main/Player")) as GameObject;
+        GameObject.DontDestroyOnLoad(player);
 
     }
 }
