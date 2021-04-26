@@ -4,7 +4,7 @@ using Random = UnityEngine.Random;
 public class ChestSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject chest;
-    [SerializeField] private float spawnProbability;
+    [SerializeField] [Range(0f, 1f)] private float spawnProbability;
 
     private void Start()
     {
@@ -17,5 +17,12 @@ public class ChestSpawner : MonoBehaviour
     private void SpawnChest()
     {
         Instantiate(chest, transform.position, Quaternion.identity);
+    }
+    
+    
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.white;
+        Gizmos.DrawWireSphere(transform.position, 0.5f);
     }
 }
