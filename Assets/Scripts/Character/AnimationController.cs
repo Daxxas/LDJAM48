@@ -114,7 +114,6 @@ public abstract class AnimationController : MonoBehaviour
 
         while (timePassed < duration)
         {
-            Debug.Log("while iteration");
             spriteRenderer.color = isNewColor? initColor : color;
             isNewColor = !isNewColor;
             yield return new WaitForSeconds(frequence);

@@ -49,14 +49,17 @@ public class HeartBar : MonoBehaviour
         int iteratedHeart = 0;
         foreach (var heart in hearts)
         {
-
             if (iteratedHeart < character.Health)
             {
-                heart.sprite = fullHeart;
+                if (heart != null)
+                {
+                    heart.sprite = fullHeart;
+                } 
             }
             else
             {
-                heart.sprite = emptyHeart;
+                if (heart != null)
+                    heart.sprite = emptyHeart;
             }
             iteratedHeart++;
 

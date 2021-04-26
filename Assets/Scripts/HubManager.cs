@@ -7,6 +7,8 @@ public class HubManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("hubmanager call");
+        
         var player = FindObjectOfType<PlayerController>(); 
         player.transform.position = transform.position;
         player.Heal(player.MaxHealth);

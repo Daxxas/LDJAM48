@@ -26,7 +26,8 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if( whatIsWall.value == (whatIsWall.value | (1 << other.GetComponent<Collider2D>().gameObject.layer)))
+        Debug.Log("trigger");
+        if( whatIsWall == (whatIsWall | (1 << other.GetComponent<Collider2D>().gameObject.layer)))
         {
             Destroy(gameObject);
         }

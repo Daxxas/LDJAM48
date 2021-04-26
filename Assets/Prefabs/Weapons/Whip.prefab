@@ -188,8 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponPrefab: {fileID: 9017950810711541542}
   weaponType: 4
-  droppedSprite: {fileID: -2490387406912293434, guid: 6f96f770769a27c4ca608879b59d62db, type: 3}
-  attackSound: {fileID: 8300000, guid: 7fbcfdcad26b6ee43bb0d782fdf179d8, type: 3}
+  droppedSprite: {fileID: -6272379534387448305, guid: 6f96f770769a27c4ca608879b59d62db, type: 3}
   damage: 1
   turnSpeed: 0
   projectile: {fileID: 0}
