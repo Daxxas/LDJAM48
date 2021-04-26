@@ -12,18 +12,32 @@ public class LevelGenerator : MonoBehaviour
     private LevelModule[] levels;
     private List<LevelModule> generatedBonusRooms = new List<LevelModule>();
 
-    private void Start()
+    private void Awake()
     {
         levels = Resources.LoadAll<LevelModule>("Levels");
     }
 
+    private void Start()
+    {
+        
+        var levelManager = FindObjectOfType<LevelManager>();
+        GenerateLevel(levelManager.levelBiomeOrder[levelManager.currentBiomeIndex],
+            levelManager.levelBiomeSize[levelManager.currentBiomeIndex]);
+    }
+    
     public void GenerateLevel(LevelBiome levelBiome, int size)
     {
-        Debug.Log("generate level called with size " + size);
+        Debug.Log("Longueur "+ levels.Length);
+        Debug.Log("generate level called with biome " + levelBiome);
+        
         
         LevelModule[] levelsForBiome =
             Array.FindAll(levels, level => level.GetComponent<LevelModule>().levelBiome == levelBiome);
 
+        Debug.Log("found this amount of room for biome " + levelsForBiome.Length);
+
+        
+        
         LevelModule[] bottoms = Array.FindAll(levelsForBiome,
             level => level.GetComponent<LevelModule>().levelType == LevelType.Bottom);
         LevelModule[] middles = Array.FindAll(levelsForBiome,

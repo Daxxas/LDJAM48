@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
-    private int currentBiomeIndex = 0;
-    [SerializeField] private List<LevelBiome> levelBiomeOrder;
-    [SerializeField] private List<int> levelBiomeSize;
+    public int currentBiomeIndex = 0; 
+    public List<LevelBiome> levelBiomeOrder; 
+    public List<int> levelBiomeSize;
     
     private static LevelManager _instance;
 
@@ -16,14 +16,17 @@ public class LevelManager : MonoBehaviour
     void Awake()
     {
         _instance = this;
-        
-        DontDestroyOnLoad(gameObject);
     }
 
     private void Start()
     {
+        Debug.Log("Start method level manager");
         var levelGenerator = FindObjectOfType<LevelGenerator>();
-        levelGenerator.GenerateLevel(levelBiomeOrder[currentBiomeIndex], levelBiomeSize[currentBiomeIndex]);
+        if (levelGenerator != null)
+        {
+            Debug.Log("generate level called");
+            levelGenerator.GenerateLevel(levelBiomeOrder[currentBiomeIndex], levelBiomeSize[currentBiomeIndex]);
+        }
     }
 
     
@@ -32,9 +35,6 @@ public class LevelManager : MonoBehaviour
     {
         currentBiomeIndex++;
         SceneManager.LoadScene(1);
-        var levelGenerator = FindObjectOfType<LevelGenerator>();
-        Debug.Log("Generating level with biome : " + levelBiomeOrder[currentBiomeIndex]);
-        levelGenerator.GenerateLevel(levelBiomeOrder[currentBiomeIndex], levelBiomeSize[currentBiomeIndex]);
     }
     
     
@@ -44,11 +44,8 @@ public class LevelManager : MonoBehaviour
         get {
             if (_instance == null)
             {
-                if (_instance == null)
-                {
-                    GameObject container = new GameObject("LevelManager");
-                    _instance = container.AddComponent<LevelManager>();
-                }
+                GameObject container = new GameObject("LevelManager");
+                _instance = container.AddComponent<LevelManager>();
             }
      
             return _instance;

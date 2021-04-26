@@ -24,6 +24,7 @@ public class WeaponAnimationController : AnimationController
 
         foreach (var clip in animator.runtimeAnimatorController.animationClips)
         {
+
             if (clip.name == ATTACK[0])
             {
                 characterController.UpdateWeapon(clip.length, GetComponent<Weapon>().WeaponType);
