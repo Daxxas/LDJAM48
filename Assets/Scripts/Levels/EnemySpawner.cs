@@ -1,10 +1,11 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class EnemySpawner : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> enemyTypes;
+    [SerializeField] private MobTable enemyTypes;
     [SerializeField] private int min;
     [SerializeField] private int max;
     [SerializeField] private float radius;
@@ -17,13 +18,19 @@ public class EnemySpawner : MonoBehaviour
         {
             Vector2 enemyPosition = new Vector2(transform.position.x, transform.position.y)
                                     + UnityEngine.Random.insideUnitCircle * radius;
-            int enemyTypeIndex = Random.Range(0, enemyTypes.Count);
+            int enemyTypeIndex = Random.Range(0, enemyTypes.table.Count);
 
             Instantiate(
-                enemyTypes[enemyTypeIndex],
+                enemyTypes.table[enemyTypeIndex],
                 enemyPosition,
-                enemyTypes[enemyTypeIndex].transform.rotation
+                enemyTypes.table[enemyTypeIndex].transform.rotation
             );
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(transform.position, radius);
     }
 }
