@@ -17,6 +17,7 @@ public class HeartBar : MonoBehaviour
         hearts = new List<UnityEngine.UI.Image>();
         character = FindObjectOfType<PlayerController>();
         character.onHit += UpdateHealthBar;
+        character.onHeal += UpdateHealthBar;
 
         InitHealthBar();
     }

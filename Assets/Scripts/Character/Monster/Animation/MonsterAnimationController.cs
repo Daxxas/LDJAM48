@@ -48,10 +48,21 @@ public class MonsterAnimationController : AnimationController
         
         foreach (var clip in animator.runtimeAnimatorController.animationClips)
         {
-            if (clip.name == ATTACK[1])
+            if (GetComponentInChildren<Weapon>().WeaponType == WeaponType.Shot)
             {
-                characterController.UpdateWeapon(clip.length, GetComponentInChildren<Weapon>().WeaponType);
+                if (clip.name == SHOOT[1])
+                {
+                    characterController.UpdateWeapon(clip.length, GetComponentInChildren<Weapon>().WeaponType);
+                }
             }
+            else
+            {
+                if (clip.name == ATTACK[1])
+                {
+                    characterController.UpdateWeapon(clip.length, GetComponentInChildren<Weapon>().WeaponType);
+                }
+            }
+            
         }
     }
     

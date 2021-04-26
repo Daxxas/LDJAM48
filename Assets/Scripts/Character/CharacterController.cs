@@ -53,6 +53,9 @@ public abstract class CharacterController : MonoBehaviour
     
     public delegate void OnHit();
     public event OnHit onHit;
+    
+    public delegate void OnHeal();
+    public event OnHeal onHeal;
 
     
     private bool isHitten = false;
@@ -174,6 +177,7 @@ public abstract class CharacterController : MonoBehaviour
     public void Heal(int healAmount)
     {
         health = Mathf.Clamp(health + healAmount, 0, maxHealth);
+        onHeal?.Invoke();
     }
 
     public void UpdateWeapon(float newAttackSpeed, WeaponType newWeaponType)
