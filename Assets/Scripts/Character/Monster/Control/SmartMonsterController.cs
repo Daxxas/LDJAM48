@@ -96,11 +96,8 @@ public class SmartMonsterController : CharacterController
                 agent.velocity = Vector3.zero;
                 agent.isStopped = true;
             }
-            
-            
-            
-            
-            if (!IsAttacking && targetController.Health > 0)
+
+            if (!IsAttacking && !targetController.IsDead)
             {
                 if (CurrentWeaponType == WeaponType.Shot)
                 {
@@ -111,6 +108,10 @@ public class SmartMonsterController : CharacterController
                     characterState = CharacterState.ATTACK;
                 }
                 RaiseAttackEvent();
+            }
+            else
+            {
+                characterState = CharacterState.IDLE;
             }
         }
     }
