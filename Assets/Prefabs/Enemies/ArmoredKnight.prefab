@@ -76,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -137067111
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 3706657621404605341, guid: a7b1742563e5b644caad93e7c628fa30, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -203,18 +203,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterState: 0
   moveSpeed: 1
-  knockbackResistance: 0.9
+  knockbackResistance: 1
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 256
-  attackClip: {fileID: 7400000, guid: f4065d3c42cd54c4f8601090c129aea6, type: 2}
+  attackSpeed: 0
   invincibleDurationAfterHit: 0
   hitDuration: 0.6
   hitBlinkFrequence: 0.1
   hitColor: {r: 1, g: 0, b: 0, a: 1}
-  maxHealth: 5
+  maxHealth: 7
   momentumCoef: 5
-  eyeReach: 20
+  eyeReach: 10
   attackDashForce: 6
 --- !u!1 &6831743609064733627
 GameObject:
@@ -264,6 +264,7 @@ MonoBehaviour:
   weaponType: 0
   droppedSprite: {fileID: 0}
   damage: 1
+  turnSpeed: 0
   projectile: {fileID: 0}
   knockback: 0
   hitZone: {fileID: 6831743609064733626}

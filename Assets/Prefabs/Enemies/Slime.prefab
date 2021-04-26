@@ -76,7 +76,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -137067111
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: -1167007592939239947, guid: e6fa0da7867513049813fa26eb9e568d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -175,14 +175,15 @@ MonoBehaviour:
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 256
+  attackSpeed: 0
   invincibleDurationAfterHit: 0
   hitDuration: 0.6
   hitBlinkFrequence: 0.1
   hitColor: {r: 1, g: 0, b: 0, a: 1}
-  maxHealth: 3
+  maxHealth: 1
   momentumCoef: 5
   eyeReach: 10
-  attackDashForce: 20
+  attackDashForce: 15
 --- !u!195 &7682006017720899251
 NavMeshAgent:
   m_ObjectHideFlags: 0
