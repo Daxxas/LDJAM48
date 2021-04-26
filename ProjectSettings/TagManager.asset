@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Wall
+  - Enemy
+  - Player
+  - Interactable
+  - Weapon
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Terrain
+    uniqueID: 3943715417
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Prop
+    uniqueID: 1732367059
+    locked: 0
+  - name: Drops
+    uniqueID: 377179775
+    locked: 0
+  - name: Enemy
+    uniqueID: 4157900185
+    locked: 0
+  - name: Player
+    uniqueID: 930115953
+    locked: 0
+  - name: Foreground
+    uniqueID: 3773091081
+    locked: 0

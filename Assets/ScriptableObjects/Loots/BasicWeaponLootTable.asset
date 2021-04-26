@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34f11cd4da9f70947a763f3afe43750b, type: 3}
+  m_Name: BasicWeaponLootTable
+  m_EditorClassIdentifier: 
+  weightedLoots:
+  - item: {fileID: 3865768284636149820, guid: 248b2e3deb61ead409f41eb019821da1, type: 3}
+    probabilityWeight: 5
+  - item: {fileID: 4817508584529260022, guid: 83d671bee9765044ba0d8d1205c73b8a, type: 3}
+    probabilityWeight: 2
+  - item: {fileID: 2689539861781523975, guid: 35f67cc3c149cc54d9b0dccd9bab60d5, type: 3}
+    probabilityWeight: 1
