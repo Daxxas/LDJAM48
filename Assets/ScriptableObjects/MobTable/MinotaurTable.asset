@@ -10,10 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3564e10acab9c2459dad3600cf19e38, type: 3}
-  m_Name: PlainTable
+  m_Name: MinotaurTable
   m_EditorClassIdentifier: 
   table:
-  - {fileID: 7412979713769839495, guid: 230bd7d84e59d3b4d8bf52e340d78c4a, type: 3}
-  - {fileID: 5123923526697842625, guid: 68d1b9e3a6ee1514f9dcc1564dcdfa03, type: 3}
-  - {fileID: 7103354172334383792, guid: 56e0659810ddd5740a3a1366b1c9fe33, type: 3}
-  - {fileID: 4383378261863751927, guid: 7c6c0061069fd9b40a611072e0bae14f, type: 3}
+  - {fileID: 4269349068623281879, guid: 9ccdb4ac256d10d428cc4b7fc4b78a96, type: 3}

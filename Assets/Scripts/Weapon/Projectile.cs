@@ -8,6 +8,7 @@ public class Projectile : MonoBehaviour
     private Rigidbody2D rigidbody;
 
     public LayerMask whatIsEnemy;
+    public LayerMask whatIsWall;
     public int damage = 0;
     public float knockback = 0;
     
@@ -25,7 +26,7 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if( LayerMask.GetMask("Wall") == (LayerMask.GetMask("Wall") | (1 << other.GetComponent<Collider2D>().gameObject.layer)))
+        if( whatIsWall.value == (whatIsWall.value | (1 << other.GetComponent<Collider2D>().gameObject.layer)))
         {
             Destroy(gameObject);
         }

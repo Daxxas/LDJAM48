@@ -7097,11 +7097,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4475337552077983978, guid: 8ef9345fdddf5174898fc49239a22e3f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.5
+      value: 5.36
       objectReference: {fileID: 0}
     - target: {fileID: 4475337552077983978, guid: 8ef9345fdddf5174898fc49239a22e3f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.5
+      value: -3.01
       objectReference: {fileID: 0}
     - target: {fileID: 4475337552077983978, guid: 8ef9345fdddf5174898fc49239a22e3f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7145,7 +7145,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4475337552077983979, guid: 8ef9345fdddf5174898fc49239a22e3f, type: 3}
       propertyPath: radius
-      value: 1
+      value: 1.51
       objectReference: {fileID: 0}
     - target: {fileID: 4475337552077983979, guid: 8ef9345fdddf5174898fc49239a22e3f, type: 3}
       propertyPath: enemyTypes

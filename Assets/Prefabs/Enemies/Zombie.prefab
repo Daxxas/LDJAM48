@@ -48,6 +48,7 @@ MonoBehaviour:
   weaponType: 0
   droppedSprite: {fileID: 0}
   damage: 1
+  turnSpeed: 0
   projectile: {fileID: 0}
   knockback: 0
   hitZone: {fileID: 1726051011}
@@ -153,7 +154,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -137067111
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 1
   m_Sprite: {fileID: 5114223801086436903, guid: 396fd1b047c433e4d9e62f51eeed45f4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -252,12 +253,12 @@ MonoBehaviour:
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 256
-  attackClip: {fileID: 7400000, guid: 9ad830d515c627147ac263b001296d35, type: 2}
+  attackSpeed: 0
   invincibleDurationAfterHit: 0
   hitDuration: 0.6
   hitBlinkFrequence: 0.1
   hitColor: {r: 1, g: 0, b: 0, a: 1}
-  maxHealth: 3
+  maxHealth: 2
   momentumCoef: 5
   eyeReach: 10
   attackDashForce: 5
