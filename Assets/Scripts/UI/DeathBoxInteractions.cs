@@ -19,10 +19,13 @@ public class DeathBoxInteractions : MonoBehaviour
         SceneManager.LoadScene(index);
     }
 
+    [ContextMenu("appear")]
     private void AppearOnPlayerDeath()
     {
         Debug.Log("Death box appear");
         transform.GetChild(0).gameObject.SetActive(true);
+        transform.GetChild(0).localScale = Vector3.zero;
+        LeanTween.scale(transform.GetChild(0).gameObject, new Vector3(1f, 1f, 1f), 0.5f);
     }
     
 }
