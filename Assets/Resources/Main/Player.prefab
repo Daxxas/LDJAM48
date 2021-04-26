@@ -34,7 +34,7 @@ Transform:
   m_LocalPosition: {x: 12.52, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8930208796697585996}
+  - {fileID: 8720896146174200056}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterState: 0
   moveSpeed: 7
-  knockbackResistance: 1
+  knockbackResistance: 0
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 128
@@ -197,7 +197,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.41
---- !u!1001 &4122274832513008827
+--- !u!1001 &4313852913468024079
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -254,8 +254,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 83d671bee9765044ba0d8d1205c73b8a, type: 3}
---- !u!4 &8930208796697585996 stripped
+--- !u!4 &8720896146174200056 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4817508584529260023, guid: 83d671bee9765044ba0d8d1205c73b8a, type: 3}
-  m_PrefabInstance: {fileID: 4122274832513008827}
+  m_PrefabInstance: {fileID: 4313852913468024079}
   m_PrefabAsset: {fileID: 0}

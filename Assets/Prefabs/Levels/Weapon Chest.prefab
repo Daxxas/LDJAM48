@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lootTable: {fileID: 11400000, guid: 556385df21447434c8afd8ea2b0ad406, type: 2}
   openSprite: {fileID: -181100321358885483, guid: d91c30b885515d14e9fac81eddb863c8, type: 3}
-  droppedWeaponPrefab: {fileID: 6862689638514658115, guid: a51ca4d50a007404db5fb605e9781357, type: 3}
+  droppedWeaponPrefab: {fileID: 6862689638514658115, guid: e7bed7aca67ac124aa2d22fcdd0ae79e, type: 3}
 --- !u!61 &2469716768624148006
 BoxCollider2D:
   m_ObjectHideFlags: 0
