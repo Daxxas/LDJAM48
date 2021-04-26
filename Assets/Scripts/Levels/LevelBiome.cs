@@ -1,4 +1,6 @@
 public enum LevelBiome
 {
-    Plains
+    Plains,
+    Caves,
+    Dungeon
 }
