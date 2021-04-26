@@ -26,11 +26,14 @@ public class LevelManager : MonoBehaviour
         levelGenerator.GenerateLevel(levelBiomeOrder[currentBiomeIndex], levelBiomeSize[currentBiomeIndex]);
     }
 
+    
+    [ContextMenu("Switch to next level")]
     public void SwitchToNextLevel()
     {
         currentBiomeIndex++;
         SceneManager.LoadScene(1);
         var levelGenerator = FindObjectOfType<LevelGenerator>();
+        Debug.Log("Generating level with biome : " + levelBiomeOrder[currentBiomeIndex]);
         levelGenerator.GenerateLevel(levelBiomeOrder[currentBiomeIndex], levelBiomeSize[currentBiomeIndex]);
     }
     
