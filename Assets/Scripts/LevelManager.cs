@@ -14,6 +14,7 @@ public class LevelManager : MonoBehaviour
 
     private AudioSource audioSource;
     private AudioClip nextLevelSound;
+    private LevelBiome biomeMusic;
 
     void Awake()
     {
@@ -24,9 +25,16 @@ public class LevelManager : MonoBehaviour
     [ContextMenu("Switch to next level")]
     public void SwitchToNextLevel()
     {
-        audioSource.PlayOneShot(nextLevelSound, .5F);
-
         currentBiomeIndex++;
+        
+        audioSource.PlayOneShot(nextLevelSound, .5F);
+        if (levelBiomeOrder[currentBiomeIndex] != biomeMusic)
+        {
+            biomeMusic = levelBiomeOrder[currentBiomeIndex];
+            audioSource.clip = Resources.Load<AudioClip>("Audio/" + biomeMusic);
+            audioSource.Play();
+        } 
+        
         SceneManager.LoadScene(1);
     }
 

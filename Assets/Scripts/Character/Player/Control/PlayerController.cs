@@ -114,8 +114,9 @@ public class PlayerController : CharacterController
         base.Hit(source, damage, knockbackForce);
         
         audioSource.PlayOneShot(hitSound);
-        if (Health <= 0 && !IsDead)
+        if (Health == 0)
         {
+            audioSource.Stop();
             audioSource.PlayOneShot(dieSound);
         }
     }
