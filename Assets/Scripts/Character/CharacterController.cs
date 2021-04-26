@@ -135,8 +135,9 @@ public abstract class CharacterController : MonoBehaviour
 
             if (health <= 0)
             {
-                onDeath?.Invoke();
+                Debug.Log("HEALTH<0");
                 isDead = true;
+                onDeath?.Invoke();
                 health = 0;
                 return;
             }
@@ -181,7 +182,6 @@ public abstract class CharacterController : MonoBehaviour
 
     public void UpdateWeapon(float newAttackSpeed, WeaponType newWeaponType)
     {
-        Debug.Log("new attack speed = " + newAttackSpeed);
         attackSpeed = newAttackSpeed;
         currentWeaponType = newWeaponType;
     }

@@ -60,7 +60,6 @@ public class SmartMonsterController : CharacterController
 
         if (IsAttacking)
         {
-            Debug.Log("return because attacking !");
             return;
         }
         
