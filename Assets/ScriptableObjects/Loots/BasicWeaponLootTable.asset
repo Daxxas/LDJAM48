@@ -25,3 +25,5 @@ MonoBehaviour:
     probabilityWeight: 2
   - item: {fileID: 5880703740806244378, guid: eddd7957000ad6b458d35497d25e229f, type: 3}
     probabilityWeight: 2
+  - item: {fileID: 2689539861781523975, guid: 35f67cc3c149cc54d9b0dccd9bab60d5, type: 3}
+    probabilityWeight: 2
