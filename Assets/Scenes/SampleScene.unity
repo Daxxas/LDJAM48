@@ -15766,7 +15766,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2233233925243318706}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.32, y: 0, z: 0}
+  m_LocalPosition: {x: 2.03, y: -1.77, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2041361901805892358}
@@ -15814,7 +15814,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &2233233925243318707
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15962,7 +15962,7 @@ MonoBehaviour:
   maxHealth: 3
   momentumCoef: 5
   eyeReach: 10
-  attackDashForce: 5
+  attackDashForce: 20
 --- !u!1001 &5253907475900603488
 PrefabInstance:
   m_ObjectHideFlags: 0

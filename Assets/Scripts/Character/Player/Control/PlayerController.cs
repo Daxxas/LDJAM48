@@ -29,7 +29,7 @@ public class PlayerController : CharacterController
 
     private void Update()
     {
-        base.Update();
+        Vector2 currentVel = Vector2.zero;
         
         if (IsDead || IsAttacking)
         {
@@ -37,10 +37,28 @@ public class PlayerController : CharacterController
             return;
         }
 
-        Move(inputDirection);
+        
+        if (!IsDead)
+        {
+            if (momentum.magnitude > 0.2f)
+            {
+                momentum = Vector2.Lerp(momentum, Vector3.zero, momentumCoef * Time.deltaTime);
+            }
+            else
+            {
+                momentum = Vector2.zero;
+            }
+        }
+        else
+        {
+            momentum = Vector2.zero;
+        }
+        currentVel = Move(inputDirection) + momentum;
+
+        rigidbody.velocity = currentVel;
     }
 
-    private void Move(Vector2 direction)
+    private Vector2 Move(Vector2 direction)
     {
         if (!IsAttacking)
         {
@@ -48,16 +66,15 @@ public class PlayerController : CharacterController
 
             if (direction.magnitude > 0.1f)
             {
-                rigidbody.velocity = direction * moveSpeed;
                 isWalking = true;
+                return direction * moveSpeed;
             }
             else
             {
-                rigidbody.velocity = Vector2.zero;
                 isWalking = false;
-
             }
         }
+        return Vector2.zero;
     }
 
     private void PlayerAttack()

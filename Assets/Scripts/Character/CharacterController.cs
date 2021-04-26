@@ -67,10 +67,10 @@ public abstract class CharacterController : MonoBehaviour
     public bool IsDead => isDead;
     private bool isInvincible = false;
     
-    private Vector2 momentum = Vector2.zero;
+    protected Vector2 momentum = Vector2.zero;
 
     
-    [SerializeField] private float momentumCoef = 5f;
+    [SerializeField] protected float momentumCoef = 5f;
 
     protected virtual void Start()
     {
