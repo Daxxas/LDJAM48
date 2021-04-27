@@ -77,10 +77,8 @@ public class PlayerAnimationController : AnimationController
     {
         base.Update();
 
-        Debug.Log(characterController.IsDead);
         if (characterController.IsDead)
         {
-            Debug.Log("ANIMATION ISDEAD");
             ChangeAnimationState(DEATH);
             return;
         }
