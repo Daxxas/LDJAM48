@@ -132,7 +132,7 @@ MonoBehaviour:
   weaponPrefab: {fileID: 4047627435971371240}
   weaponType: 5
   droppedSprite: {fileID: 6940219203910030773, guid: 6f96f770769a27c4ca608879b59d62db, type: 3}
-  damage: 1
+  damage: 2
   turnSpeed: 0
   projectile: {fileID: 0}
   knockback: 5
