@@ -15,12 +15,18 @@ public abstract class AnimationController : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         characterController = GetComponent<CharacterController>();
+
+        characterController.onAttack += UpdateAttackDirection;
+        characterController.onAttack += UpdateCurrentDirection;
     }
 
     protected void Update()
     {
-        UpdateCurrentDirection();
-        UpdateAttacktDirection();
+        if (!characterController.IsAttacking)
+        {
+            UpdateCurrentDirection();
+            UpdateAttackDirection();
+        }
     }
     
     protected void UpdateCurrentDirection()
@@ -59,8 +65,9 @@ public abstract class AnimationController : MonoBehaviour
         }
     }
     
-    protected void UpdateAttacktDirection()
+    protected void UpdateAttackDirection()
     {
+       
         var normalizedDirection = characterController.Direction.normalized;
         
         if (normalizedDirection.y > 0.75f)
