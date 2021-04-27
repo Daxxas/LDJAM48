@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3564e10acab9c2459dad3600cf19e38, type: 3}
-  m_Name: MinotaurTable
+  m_Name: KingSkeletonTable
   m_EditorClassIdentifier: 
   table:
-  - {fileID: 4269349068623281879, guid: 9ccdb4ac256d10d428cc4b7fc4b78a96, type: 3}
+  - {fileID: 7003869611354187171, guid: 6920cca0dc77a564b9e96337b07d1cb9, type: 3}

@@ -5970,6 +5970,10 @@ PrefabInstance:
       value: ChestSpawner
       objectReference: {fileID: 0}
     - target: {fileID: 4217773615203917658, guid: 38752b287464cfb4d999ec3be6bec784, type: 3}
+      propertyPath: chest
+      value: 
+      objectReference: {fileID: 5442983662592903241, guid: b114cb6e9e0e16d4380266e3f1dd5f8a, type: 3}
+    - target: {fileID: 4217773615203917658, guid: 38752b287464cfb4d999ec3be6bec784, type: 3}
       propertyPath: spawnProbability
       value: 0.4
       objectReference: {fileID: 0}
