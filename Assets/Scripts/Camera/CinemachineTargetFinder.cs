@@ -18,7 +18,7 @@ public class CinemachineTargetFinder : MonoBehaviour
     public void TrySetFollow()
     {
         vcam = GetComponent<CinemachineVirtualCamera>();
-        vcam.Follow = FindObjectOfType<PlayerController>().transform;
+        vcam.Follow = FindObjectOfType<PlayerController>()?.transform;
     }
 
     private void Update()

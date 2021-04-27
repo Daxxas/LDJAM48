@@ -38,7 +38,8 @@ public class SmartMonsterController : CharacterController
     {
         base.Update();
         
-        direction = (target.position - transform.position).normalized;
+        if(target != null)
+            direction = (target.position - transform.position).normalized;
         
         if (IsDead)
         {

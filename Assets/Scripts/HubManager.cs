@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class HubManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private GameObject player;
     void Start()
     {
-        Debug.Log("hubmanager call");
+        var newPlayer = Instantiate(player);
         
-        var player = FindObjectOfType<PlayerController>(); 
-        player.transform.position = transform.position;
-        player.Heal(player.MaxHealth);
-        player.IsDead = false;
-
+        DontDestroyOnLoad(newPlayer);
+        
+        newPlayer.transform.position = transform.position;
     }
 }

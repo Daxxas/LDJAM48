@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class DeathBoxInteractions : MonoBehaviour
 {
+    private PlayerController player;
+    
     private void Start()
     {
-        var player = FindObjectOfType<PlayerController>();
+        player = FindObjectOfType<PlayerController>();
 
         player.onDeath += (AppearOnPlayerDeath);
     }
@@ -22,7 +24,10 @@ public class DeathBoxInteractions : MonoBehaviour
     [ContextMenu("appear")]
     private void AppearOnPlayerDeath()
     {
+        
         Debug.Log("Death box appear");
+        Destroy(player.gameObject);
+
         transform.GetChild(0).gameObject.SetActive(true);
         transform.GetChild(0).localScale = Vector3.zero;
         LeanTween.scale(transform.GetChild(0).gameObject, new Vector3(1f, 1f, 1f), 0.5f);
