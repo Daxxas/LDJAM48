@@ -7,10 +7,18 @@ public class HubManager : MonoBehaviour
     [SerializeField] private GameObject player;
     void Start()
     {
-        var newPlayer = Instantiate(player);
+        if (FindObjectOfType<PlayerController>() == null)
+        {
+            var newPlayer = Instantiate(player);
+            
+            DontDestroyOnLoad(newPlayer);
+            newPlayer.transform.position = transform.position;
+        }
+        else
+        {
+            FindObjectOfType<PlayerController>().transform.position = transform.position;
+        }
         
-        DontDestroyOnLoad(newPlayer);
         
-        newPlayer.transform.position = transform.position;
     }
 }

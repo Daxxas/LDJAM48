@@ -4,10 +4,17 @@ using UnityEngine.SceneManagement;
 public class StartGameTriggerZone : MonoBehaviour
 {
     private AudioSource audioSource;
+    [SerializeField] private GameObject endWall;
 
     private void Start()
     {
         audioSource = FindObjectOfType<AudioSource>();
+
+        if (LevelManager.Instance.currentBiomeIndex >= LevelManager.Instance.levelBiomeOrder.Count - 1)
+        {
+            gameObject.SetActive(false);
+            endWall.SetActive(true);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

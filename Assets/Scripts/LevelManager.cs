@@ -26,16 +26,26 @@ public class LevelManager : MonoBehaviour
     public void SwitchToNextLevel()
     {
         currentBiomeIndex++;
-        
-        audioSource.PlayOneShot(nextLevelSound, .5F);
-        if (levelBiomeOrder[currentBiomeIndex] != biomeMusic)
+
+        if (currentBiomeIndex >= levelBiomeOrder.Count - 1)
         {
-            biomeMusic = levelBiomeOrder[currentBiomeIndex];
-            audioSource.clip = Resources.Load<AudioClip>("Audio/" + biomeMusic);
-            audioSource.Play();
-        } 
+            SceneManager.LoadScene(0);
+        }
+        else
+        {
+            audioSource.PlayOneShot(nextLevelSound, .5F);
+            if (levelBiomeOrder[currentBiomeIndex] != biomeMusic)
+            {
+                biomeMusic = levelBiomeOrder[currentBiomeIndex];
+                audioSource.clip = Resources.Load<AudioClip>("Audio/" + biomeMusic);
+                audioSource.Play();
+            } 
+            
+            SceneManager.LoadScene(1);
+
+        }
         
-        SceneManager.LoadScene(1);
+        
     }
 
 
