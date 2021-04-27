@@ -17,21 +17,18 @@ public class WeaponAnimationController : AnimationController
 
     protected override void Start()
     {
-        base.Start();
-        
         animator = GetComponentInParent<Animator>();
         characterController = GetComponentInParent<CharacterController>();
 
+        characterController.onAttack += UpdateCurrentDirection;
+        
         foreach (var clip in animator.runtimeAnimatorController.animationClips)
         {
-
             if (clip.name == ATTACK[0])
             {
                 characterController.UpdateWeapon(clip.length, GetComponent<Weapon>().WeaponType);
             }
         }
-        
-        
     }
 
     private void Update()
