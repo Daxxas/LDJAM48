@@ -12,7 +12,7 @@ public class DeathBoxInteractions : MonoBehaviour
     {
         player = FindObjectOfType<PlayerController>();
 
-        player.onDeath += (AppearOnPlayerDeath);
+        player.onDeath += AppearOnPlayerDeath;
     }
     
 
@@ -26,11 +26,18 @@ public class DeathBoxInteractions : MonoBehaviour
     {
         
         Debug.Log("Death box appear");
+        
+        transform.GetChild(0).gameObject.SetActive(true);
+        transform.GetChild(0).localScale = new Vector3(0.1f, 0.1f, 0.1f);
+        LeanTween.scale(transform.GetChild(0).gameObject, new Vector3(1f, 1f, 1f), 0.5f);
+        
         Destroy(player.gameObject);
 
-        transform.GetChild(0).gameObject.SetActive(true);
-        transform.GetChild(0).localScale = Vector3.zero;
-        LeanTween.scale(transform.GetChild(0).gameObject, new Vector3(1f, 1f, 1f), 0.5f);
     }
-    
+
+
+    public void OnDestroy()
+    {
+        player.onDeath -= AppearOnPlayerDeath;
+    }
 }

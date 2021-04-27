@@ -256,7 +256,7 @@ MonoBehaviour:
   damage: 1
   turnSpeed: 0
   projectile: {fileID: 0}
-  knockback: 15
+  knockback: 0
   hitZone: {fileID: 4503237852340134467}
 --- !u!61 &4503237852340134468
 BoxCollider2D:

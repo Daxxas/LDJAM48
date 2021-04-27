@@ -130,8 +130,11 @@ public class SmartMonsterController : CharacterController
     
     private void Charge()
     {
-        Vector2 toTarget = (target.position - transform.position).normalized;
-        AddImpact(toTarget, attackDashForce, true);
+        if (target != null)
+        {
+            Vector2 toTarget = (target.position - transform.position).normalized;
+            AddImpact(toTarget, attackDashForce, true);
+        }
     }
 
 }
